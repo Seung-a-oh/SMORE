@@ -110,4 +110,7 @@ def exper_edit(request, id):
 def exper_delete(request, id):
     delete_exper = ExperRec.objects.get(id = id)
     delete_exper.delete()
-    return redirect('experience') 
+    return redirect('experience')
+
+def dashboard(request):
+    return render(request, 'dashboard.html')

@@ -22,7 +22,7 @@ from smore import views as S
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', S.home, name='home'),
+    path('smore/home', S.home, name='home'),
     path('account/signup', A.signup, name="signup"),
     path('account/user_login/', A.user_login, name="user_login"),
     path('account/user_logout/',A.user_logout, name="user_logout"),
@@ -37,4 +37,5 @@ urlpatterns = [
     path('smore/exper_detail/<str:id>', S.exper_detail, name="exper_detail"),
     path('smore/exper_edit/<str:id>', S.exper_edit, name="exper_edit"),
     path('smore/exper_delete/<str:id>', S.exper_delete, name="exper_delete"),
+    path('', S.dashboard, name='dashboard')
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
