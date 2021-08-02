@@ -3,6 +3,9 @@ from account.models import User
 from django.utils import timezone
 from smore.models import Item, ItemImage
 from smore.models import ExperRec
+from collections import OrderedDict
+from .fusioncharts import FusionCharts
+from django.http import HttpResponse
 from .models import *
 
 
@@ -114,3 +117,52 @@ def exper_delete(request, id):
 
 def dashboard(request):
     return render(request, 'dashboard.html')
+
+def com_chart(request):
+    dataSource = OrderedDict()
+
+    # The `chartConfig` dict contains key-value pairs data for chart attribute
+    chartConfig = OrderedDict()
+    chartConfig["caption"] = "[2021] 기업 매출 현황"
+    chartConfig["subCaption"] = "2021년도 매출"
+    chartConfig["xAxisName"] = "월별"
+    chartConfig["yAxisName"] = "상품 판매 개수"
+    chartConfig["numberSuffix"] = "개"
+    chartConfig["theme"] = "fusion"
+
+    # The `chartData` dict contains key-value pairs data
+    chartData = OrderedDict()
+    chartData["1월"] = 120
+    chartData["2월"] = 90
+    chartData["3월"] = 129
+    chartData["4월"] = 134
+    chartData["5월"] = 157
+    chartData["6월"] = 93
+    chartData["7월"] = 113
+    chartData["8월"] = 153
+    chartData["9월"] = 135
+    chartData["10월"] = 89
+    chartData["11월"] = 142
+    chartData["12월"] = 133
+
+
+    dataSource["chart"] = chartConfig
+    dataSource["data"] = []
+
+    # Convert the data in the `chartData` array into a format that can be consumed by FusionCharts.
+    # The data for the chart should be in an array wherein each element of the array is a JSON object
+    # having the `label` and `value` as keys.
+
+    # Iterate through the data in `chartData` and insert in to the `dataSource['data']` list.
+    for key, value in chartData.items():
+        data = {}
+        data["label"] = key
+        data["value"] = value
+        dataSource["data"].append(data)
+
+
+    # Create an object for the column 2D chart using the FusionCharts class constructor
+    # The chart data is passed to the `dataSource` parameter.
+    column2D = FusionCharts("column2d", "ex1" , "600", "400", "chart-1", "json", dataSource)
+
+    return  render(request, 'com_chart.html', {'output' : column2D.render(), 'chartTitle': '기업 매출 그래프'})

@@ -37,5 +37,6 @@ urlpatterns = [
     path('smore/exper_detail/<str:id>', S.exper_detail, name="exper_detail"),
     path('smore/exper_edit/<str:id>', S.exper_edit, name="exper_edit"),
     path('smore/exper_delete/<str:id>', S.exper_delete, name="exper_delete"),
-    path('', S.dashboard, name='dashboard')
+    path('', S.dashboard, name='dashboard'),
+    path('com_chart',S.com_chart, name="com_chart"),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

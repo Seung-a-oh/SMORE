@@ -16,6 +16,12 @@
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <script src="{% static 'js/script.js' %}"></script>
          <script type="text/javascript"></script>
+         
+         <script type="text/javascript" src="{% static 'fusioncharts/fusioncharts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'fusioncharts/fusioncharts.charts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'fusioncharts/themes/fusioncharts.theme.fusion.js' %}"></script>
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
         <title> {% block title%} {% endblock %} </title>
        </head>
 <body>
@@ -79,7 +85,7 @@
           <span class="link_name">Chart</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">기업통계</a></li>
+          <li><a class="link_name" href="{% url 'com_chart' %}">기업통계</a></li>
           <li><a class="link_name" href="#">상품통계</a></li>
         </ul>
       </li>
