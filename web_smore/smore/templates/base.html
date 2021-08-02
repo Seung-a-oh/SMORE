@@ -96,12 +96,13 @@
         </ul>
       </div>
       <section class="home-section">
-          <div class="text">Dashboard</div>
+          <div class="text">      
+            {% block content %}
+            {% endblock %}
+          </div>
       </section>
       <script src="{% static 'js/script.js' %}"></script>
       <script type="text/javascript"></script>
-      {% block content %}
-      {% endblock %}
     </body>
     </html>
     
