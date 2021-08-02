@@ -9,9 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% block link %}{% endblock %}">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        {% block js %}{% endblock %}
-        
-        <script src="{% static 'js/script.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <title> {% block title%} {% endblock %} </title>
        </head>
     <body>
@@ -84,8 +84,8 @@
            <span class="tooltip">Setting</span>
          </li>
          <li class="profile">
-             <div class="profile-details">
-               <img src="#" alt="profileImg">
+          <div class="profile-details">
+            <img src="profile.jpg" alt="profileImg">
                <div class="name_job">
                  <div class="name">Prem Shahi</div>
                  <div class="job">Web designer</div>
@@ -98,6 +98,8 @@
       <section class="home-section">
           <div class="text">Dashboard</div>
       </section>
+      <script src="{% static 'js/script.js' %}"></script>
+      <script type="text/javascript"></script>
       {% block content %}
       {% endblock %}
     </body>
