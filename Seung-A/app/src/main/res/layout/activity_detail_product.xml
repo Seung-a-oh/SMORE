@@ -22,35 +22,15 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="106dp"
+                    android:layout_height="76dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
-
-                    <ImageView
-                        android:id="@+id/Search2"
-                        android:layout_width="33dp"
-                        android:layout_height="36dp"
-                        android:layout_marginTop="36dp"
-                        android:layout_marginEnd="30dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/find" />
-
-                    <ImageView
-                        android:id="@+id/Category2"
-                        android:layout_width="40dp"
-                        android:layout_height="27dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="40dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/menu" />
 
                     <ImageView
                         android:id="@+id/smoreLogo"
                         android:layout_width="139dp"
                         android:layout_height="53dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="12dp"
                         android:contentDescription="SmoreLogo"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
