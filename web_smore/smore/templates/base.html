@@ -1,29 +1,30 @@
 {% load static %}
-    <!DOCTYPE html>
-    <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
-    <html lang="kr">
-      <head>
-        <meta charset="UTF-8">
-        <!-- Boxicons CDN Link -->
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% block link %}{% endblock %}">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <script src="{% static 'js/script.js' %}"></script>
-         <script type="text/javascript"></script>
-         
-         <script type="text/javascript" src="{% static 'fusioncharts/fusioncharts.js' %}"></script>
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% block link %}{% endblock %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    <!--javascript-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <!--chartjavascript-->
+    <script type="text/javascript" src="{% static 'fusioncharts/fusioncharts.js' %}"></script>
     <script type="text/javascript" src="{% static 'fusioncharts/fusioncharts.charts.js' %}"></script>
     <script type="text/javascript" src="{% static 'fusioncharts/themes/fusioncharts.theme.fusion.js' %}"></script>
     <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
     <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-        <title> {% block title%} {% endblock %} </title>
-       </head>
+    {% block js %}{% endblock %}
+
+    <title> {% block title%} {% endblock %} </title>
+   </head>
 <body>
   <div class="sidebar close">
     <div class="logo-details">
@@ -85,8 +86,7 @@
           <span class="link_name">Chart</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="{% url 'com_chart' %}">기업통계</a></li>
-          <li><a class="link_name" href="#">상품통계</a></li>
+          <li><a class="link_name" href="#">Chart</a></li>
         </ul>
       </li>
       <li>
@@ -145,12 +145,17 @@
   </li>
 </ul>
   </div>
-      <section class="home-section">
-          <div class="text">      
-            {% block content %}
-            {% endblock %}
-          </div>
-      </section>
-    </body>
-    </html>
-    
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text">
+        {% block content %}
+        {% endblock %}
+      </span>
+    </div>
+  </section>
+      <script src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript"></script>
+
+</body>
+</html>

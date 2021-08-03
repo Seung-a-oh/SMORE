@@ -7,6 +7,8 @@ from collections import OrderedDict
 from .fusioncharts import FusionCharts
 from django.http import HttpResponse
 from .models import *
+from django.shortcuts import render
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -195,6 +197,7 @@ def com_chart(request):
     # Create an object for the column 2D chart using the FusionCharts class constructor
     # The chart data is passed to the `dataSource` parameter.
     column2D = FusionCharts("column2d", "ex1" , "600", "400", "chart-1", "json", dataSource)
+
     column2D2 = FusionCharts("column2d", "ex2" , "600", "400", "chart-3", "json", dataSource2)
 
     chartObj = FusionCharts( 'bar2d', 'ex3', '600', '400', 'chart-4', 'json', """{
@@ -362,3 +365,7 @@ def com_chart(request):
   ]
 }""")
     return  render(request, 'com_chart.html', {'output' : column2D.render(), 'output2':column2D2.render(), 'output3': chartObj.render(), 'output4': chartObj2.render(),'output5': chartObj3.render(),'output6': chartObj4.render(),'chartTitle': '기업 매출 그래프', 'chartTitle2': '기업 매출 그래프2'})
+
+def product_chart(request):
+
+    return  render(request, 'product_chart.html')
