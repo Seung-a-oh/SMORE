@@ -7,9 +7,18 @@
 {% endblock %}
 
 {% block content %}
-<div id="chart-container" style="text-align: center; padding-top:145%"></div>
-<div style="padding-top: 3%">
-<h3>{{ chartTitle|safe }}</h3>
-<div id="chart-1"><span style="width: 550px;">{{ output|safe }}</span></div>
+<div class="chart" id="chart">
+	<div class="chartBox" >
+        <div id="chart-container"></div>
+	</div>
+    <div class="chartBox" >
+        <div id="chart-container_01"></div>
+    </div>
+    <div class="chartBox">
+        <div class="charDetail">
+            <h3>{{ chartTitle|safe }}</h3>
+            <div id="chart-1">{{ output|safe }}</div>
+        </div>
+    </div>
 </div>
 {% endblock %}
