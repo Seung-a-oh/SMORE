@@ -1,11 +1,43 @@
+<!-- <기업통계>
+바 차트
+-매출 (금년도/전년도비교) (완료)
+-가장 많이 팔린 상품순위 (완료)
+도넛차트
+-구매자 연령대/남녀성비 (완료)
+라인차트
+-구독자 수 -->
+
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Company Chart {% endblock %}
 {% block link %}{% static 'css/com_chart.css' %}{% endblock %}
 {% block content %}
+<script>
+	$(document).ready( function() {
+        $('#lastYear').click( function() {
+          $('#chart-1').toggle( 'slow' );
+          $('#chart-3').toggle( 'slow' );
+        });
+        $('#other').click( function() {
+          $('#chart-5').toggle( 'slow' );
+          $('#chart-6').toggle( 'slow' );
+        });
+      });
+</script>
+<div id="chart">
+	<div class="chartBox">
+	
+	</div>
 
-<h3>{{ chartTitle|safe }}</h3>
-	<div id="chart-1">{{ output|safe }}</div>
-	<div id="chart-2">{{ output_2|safe }}</div>
-    
+</div>
+<button id="lastYear">작년 매출보기</button>
+<div id="chart-1" style="display: none;">{{ output|safe }}</div>
+
+<div id="chart-3">{{ output2|safe }}</div>
+
+<div id="chart-4">{{ output3|safe }}</div>
+<button id="other">다른 성별</button>
+<div id="chart-5" style="display: none;">{{ output4|safe }}</div>
+<div id="chart-6">{{ output5|safe }}</div>
+<div id="chart-7">{{ output6|safe }}</div>
 {% endblock %}
