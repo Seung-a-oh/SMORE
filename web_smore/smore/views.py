@@ -7,6 +7,8 @@ from collections import OrderedDict
 from .fusioncharts import FusionCharts
 from django.http import HttpResponse
 from .models import *
+from django.shortcuts import render
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -166,3 +168,7 @@ def com_chart(request):
     column2D = FusionCharts("column2d", "ex1" , "600", "400", "chart-1", "json", dataSource)
 
     return  render(request, 'com_chart.html', {'output' : column2D.render(), 'chartTitle': '기업 매출 그래프'})
+
+def product_chart(request):
+
+    return  render(request, 'product_chart.html')
