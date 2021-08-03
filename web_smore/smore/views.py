@@ -194,15 +194,15 @@ def com_chart(request):
 
     # Create an object for the column 2D chart using the FusionCharts class constructor
     # The chart data is passed to the `dataSource` parameter.
-    column2D = FusionCharts("column2d", "ex1" , "700", "400", "chart-1", "json", dataSource)
-    column2D2 = FusionCharts("column2d", "ex2" , "700", "400", "chart-3", "json", dataSource2)
+    column2D = FusionCharts("column2d", "ex1" , "650", "350", "chart-1", "json", dataSource)
+    column2D2 = FusionCharts("column2d", "ex2" , "650", "350", "chart-3", "json", dataSource2)
 
-    chartObj = FusionCharts( 'bar2d', 'ex3', '800', '400', 'chart-4', 'json', """{
+    chartObj = FusionCharts( 'bar2d', 'ex3', '700', '350', 'chart-4', 'json', """{
   "chart": {
     "caption": "상품 판매 순위",
     "yaxisname": "판매 개수",
     "aligncaptionwithcanvas": "0",
-    "plottooltext": "<b>$dataValue</b> 개 판매됨",
+    "plottooltext": "<b>$label</b> 은 <b>$dataValue</b> 개 판매됨",
     "theme": "fusion"
   },
   "data": [
@@ -260,7 +260,7 @@ def com_chart(request):
     }
   ]
 }""")
-    chartObj2 = FusionCharts( 'doughnut2d', 'ex5', '700', '400', 'chart-5', 'json', """{
+    chartObj2 = FusionCharts( 'doughnut2d', 'ex5', '650', '350', 'chart-5', 'json', """{
   "chart": {
     "caption": "구매자 연령대",
     "subcaption": "2021년 구매자 통계",
@@ -291,16 +291,12 @@ def com_chart(request):
       "value": "18900"
     },
     {
-      "label": "40대 여자",
-      "value": "17904"
-    },
-    {
       "label": "그 외",
       "value": "4000"
     }
   ]
 }""")
-    chartObj3 = FusionCharts( 'doughnut2d', 'ex6', '700', '400', 'chart-6', 'json', """{
+    chartObj3 = FusionCharts( 'doughnut2d', 'ex6', '650', '350', 'chart-6', 'json', """{
   "chart": {
     "caption": "구매자 성별",
     "subcaption": "2021년 구매자 통계",
@@ -324,7 +320,7 @@ def com_chart(request):
     }
   ]
 }""")
-    chartObj4 = FusionCharts( 'line', 'ex7', '800', '400', 'chart-7', 'json', """{
+    chartObj4 = FusionCharts( 'line', 'ex7', '700', '350', 'chart-7', 'json', """{
   "chart": {
     "caption": "구독자 수",
     "yaxisname": "명",
