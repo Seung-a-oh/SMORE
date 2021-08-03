@@ -7,8 +7,6 @@ from collections import OrderedDict
 from .fusioncharts import FusionCharts
 from django.http import HttpResponse
 from .models import *
-from django.shortcuts import render
-from django.http import HttpResponse
 
 
 # Create your views here.
@@ -196,11 +194,10 @@ def com_chart(request):
 
     # Create an object for the column 2D chart using the FusionCharts class constructor
     # The chart data is passed to the `dataSource` parameter.
-    column2D = FusionCharts("column2d", "ex1" , "600", "400", "chart-1", "json", dataSource)
+    column2D = FusionCharts("column2d", "ex1" , "700", "400", "chart-1", "json", dataSource)
+    column2D2 = FusionCharts("column2d", "ex2" , "700", "400", "chart-3", "json", dataSource2)
 
-    column2D2 = FusionCharts("column2d", "ex2" , "600", "400", "chart-3", "json", dataSource2)
-
-    chartObj = FusionCharts( 'bar2d', 'ex3', '600', '400', 'chart-4', 'json', """{
+    chartObj = FusionCharts( 'bar2d', 'ex3', '800', '400', 'chart-4', 'json', """{
   "chart": {
     "caption": "상품 판매 순위",
     "yaxisname": "판매 개수",
@@ -210,11 +207,11 @@ def com_chart(request):
   },
   "data": [
     {
-      "label": "Travel & Leisure",
+      "label": "Travel",
       "value": "41"
     },
     {
-      "label": "Advertising/Marketing/PR",
+      "label": "Adver",
       "value": "39"
     },
     {
@@ -222,48 +219,48 @@ def com_chart(request):
       "value": "38"
     },
     {
-      "label": "Real Estate",
+      "label": "Real",
       "value": "32"
     },
     {
-      "label": "Communications/Cable/Phone",
+      "label": "Communic",
       "value": "26"
     },
     {
-      "label": "Construction",
+      "label": "Consn",
       "value": "25"
     },
     {
-      "label": "Entertainment",
+      "label": "Enteent",
       "value": "25"
     },
     {
-      "label": "Staffing Firm/Full Time/Temporary",
+      "label": "Stam",
       "value": "24"
     },
     {
-      "label": "Transportation/Logistics",
+      "label": "Tra",
       "value": "23"
     },
     {
-      "label": "Utilities",
+      "label": "Utes",
       "value": "22"
     },
     {
-      "label": "Aerospace/Defense Products",
+      "label": "Aee",
       "value": "18"
     },
     {
-      "label": "Banking/Finance/Securities",
+      "label": "Bng",
       "value": "16"
     },
     {
-      "label": "Consumer Products - Non-Durables",
+      "label": "fssssssssss",
       "value": "15"
     }
   ]
 }""")
-    chartObj2 = FusionCharts( 'doughnut2d', 'ex5', '600', '400', 'chart-5', 'json', """{
+    chartObj2 = FusionCharts( 'doughnut2d', 'ex5', '700', '400', 'chart-5', 'json', """{
   "chart": {
     "caption": "구매자 연령대",
     "subcaption": "2021년 구매자 통계",
@@ -278,15 +275,15 @@ def com_chart(request):
   },
   "data": [
     {
-      "label": "40대 여자",
+      "label": "20대 여자",
       "value": "10000"
     },
     {
-      "label": "30대 여자",
+      "label": "20대 남자",
       "value": "5300"
     },
     {
-      "label": "20대 남자",
+      "label": "30대 여자",
       "value": "10500"
     },
     {
@@ -294,7 +291,7 @@ def com_chart(request):
       "value": "18900"
     },
     {
-      "label": "20대 여자",
+      "label": "40대 여자",
       "value": "17904"
     },
     {
@@ -303,7 +300,7 @@ def com_chart(request):
     }
   ]
 }""")
-    chartObj3 = FusionCharts( 'doughnut2d', 'ex6', '600', '400', 'chart-6', 'json', """{
+    chartObj3 = FusionCharts( 'doughnut2d', 'ex6', '700', '400', 'chart-6', 'json', """{
   "chart": {
     "caption": "구매자 성별",
     "subcaption": "2021년 구매자 통계",
@@ -327,7 +324,7 @@ def com_chart(request):
     }
   ]
 }""")
-    chartObj4 = FusionCharts( 'line', 'ex7', '600', '400', 'chart-7', 'json', """{
+    chartObj4 = FusionCharts( 'line', 'ex7', '800', '400', 'chart-7', 'json', """{
   "chart": {
     "caption": "구독자 수",
     "yaxisname": "명",
@@ -360,9 +357,9 @@ def com_chart(request):
     },
     {
       "label": "2021",
-      "value": "86752"
+      "value": "80132"
     }
-  ] 
+  ]
 }""")
     return  render(request, 'com_chart.html', {'output' : column2D.render(), 'output2':column2D2.render(), 'output3': chartObj.render(), 'output4': chartObj2.render(),'output5': chartObj3.render(),'output6': chartObj4.render(),'chartTitle': '기업 매출 그래프', 'chartTitle2': '기업 매출 그래프2'})
 
