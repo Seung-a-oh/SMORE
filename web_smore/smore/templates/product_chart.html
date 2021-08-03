@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Dashboard {% endblock %}
+{% block link %}{% static 'css/product_chart.css' %}{% endblock %}
+{% block js %}
+<script type="text/javascript" src="{% static 'js/product_chart.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div id="chart-container" style="text-align: center; padding-top:145%"></div>
+<div style="padding-top: 3%">
+<h3>{{ chartTitle|safe }}</h3>
+<div id="chart-1"><span style="width: 550px;">{{ output|safe }}</span></div>
+</div>
+{% endblock %}
