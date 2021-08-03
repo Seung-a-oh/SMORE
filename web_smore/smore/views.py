@@ -120,6 +120,7 @@ def dashboard(request):
 
 def com_chart(request):
     dataSource = OrderedDict()
+    dataSource2 = OrderedDict()
 
     # The `chartConfig` dict contains key-value pairs data for chart attribute
     chartConfig = OrderedDict()
@@ -129,6 +130,13 @@ def com_chart(request):
     chartConfig["yAxisName"] = "상품 판매 개수"
     chartConfig["numberSuffix"] = "개"
     chartConfig["theme"] = "fusion"
+    chartConfig2 = OrderedDict()
+    chartConfig2["caption"] = "[2020] 기업 매출 현황"
+    chartConfig2["subCaption"] = "2020년도 매출"
+    chartConfig2["xAxisName"] = "월별"
+    chartConfig2["yAxisName"] = "상품 판매 개수"
+    chartConfig2["numberSuffix"] = "개"
+    chartConfig2["theme"] = "fusion"
 
     # The `chartData` dict contains key-value pairs data
     chartData = OrderedDict()
@@ -145,9 +153,25 @@ def com_chart(request):
     chartData["11월"] = 142
     chartData["12월"] = 133
 
+    chartData2 = OrderedDict()
+    chartData2["1월"] = 150
+    chartData2["2월"] = 149
+    chartData2["3월"] = 155
+    chartData2["4월"] = 89
+    chartData2["5월"] = 147
+    chartData2["6월"] = 192
+    chartData2["7월"] = 184
+    chartData2["8월"] = 92
+    chartData2["9월"] = 115
+    chartData2["10월"] = 123
+    chartData2["11월"] = 148
+    chartData2["12월"] = 129
 
     dataSource["chart"] = chartConfig
     dataSource["data"] = []
+
+    dataSource2["chart"] = chartConfig2
+    dataSource2["data"] = []
 
     # Convert the data in the `chartData` array into a format that can be consumed by FusionCharts.
     # The data for the chart should be in an array wherein each element of the array is a JSON object
@@ -160,9 +184,181 @@ def com_chart(request):
         data["value"] = value
         dataSource["data"].append(data)
 
+    for key, value in chartData2.items():
+        data = {}
+        data["label"] = key
+        data["value"] = value
+        dataSource2["data"].append(data)
+
+
 
     # Create an object for the column 2D chart using the FusionCharts class constructor
     # The chart data is passed to the `dataSource` parameter.
     column2D = FusionCharts("column2d", "ex1" , "600", "400", "chart-1", "json", dataSource)
+    column2D2 = FusionCharts("column2d", "ex2" , "600", "400", "chart-3", "json", dataSource2)
 
-    return  render(request, 'com_chart.html', {'output' : column2D.render(), 'chartTitle': '기업 매출 그래프'})
+    chartObj = FusionCharts( 'bar2d', 'ex3', '600', '400', 'chart-4', 'json', """{
+  "chart": {
+    "caption": "상품 판매 순위",
+    "yaxisname": "판매 개수",
+    "aligncaptionwithcanvas": "0",
+    "plottooltext": "<b>$dataValue</b> 개 판매됨",
+    "theme": "fusion"
+  },
+  "data": [
+    {
+      "label": "Travel & Leisure",
+      "value": "41"
+    },
+    {
+      "label": "Advertising/Marketing/PR",
+      "value": "39"
+    },
+    {
+      "label": "Other",
+      "value": "38"
+    },
+    {
+      "label": "Real Estate",
+      "value": "32"
+    },
+    {
+      "label": "Communications/Cable/Phone",
+      "value": "26"
+    },
+    {
+      "label": "Construction",
+      "value": "25"
+    },
+    {
+      "label": "Entertainment",
+      "value": "25"
+    },
+    {
+      "label": "Staffing Firm/Full Time/Temporary",
+      "value": "24"
+    },
+    {
+      "label": "Transportation/Logistics",
+      "value": "23"
+    },
+    {
+      "label": "Utilities",
+      "value": "22"
+    },
+    {
+      "label": "Aerospace/Defense Products",
+      "value": "18"
+    },
+    {
+      "label": "Banking/Finance/Securities",
+      "value": "16"
+    },
+    {
+      "label": "Consumer Products - Non-Durables",
+      "value": "15"
+    }
+  ]
+}""")
+    chartObj2 = FusionCharts( 'doughnut2d', 'ex5', '600', '400', 'chart-5', 'json', """{
+  "chart": {
+    "caption": "구매자 연령대",
+    "subcaption": "2021년 구매자 통계",
+    "showpercentvalues": "1",
+    "defaultcenterlabel": "연령대 통계  ",
+    "aligncaptionwithcanvas": "0",
+    "captionpadding": "0",
+    "decimals": "1",
+    "plottooltext": "사용자의 <b>$percentValue</b>는 <b>$label</b>입니다",
+    "centerlabel": "<b>$label</b>: $value",
+    "theme": "fusion"
+  },
+  "data": [
+    {
+      "label": "40대 여자",
+      "value": "10000"
+    },
+    {
+      "label": "30대 여자",
+      "value": "5300"
+    },
+    {
+      "label": "20대 남자",
+      "value": "10500"
+    },
+    {
+      "label": "30대 남자",
+      "value": "18900"
+    },
+    {
+      "label": "20대 여자",
+      "value": "17904"
+    },
+    {
+      "label": "그 외",
+      "value": "4000"
+    }
+  ]
+}""")
+    chartObj3 = FusionCharts( 'doughnut2d', 'ex6', '600', '400', 'chart-6', 'json', """{
+  "chart": {
+    "caption": "구매자 성별",
+    "subcaption": "2021년 구매자 통계",
+    "showpercentvalues": "1",
+    "defaultcenterlabel": "성별",
+    "aligncaptionwithcanvas": "0",
+    "captionpadding": "0",
+    "decimals": "1",
+    "plottooltext": " 사용자의 <b>$percentValue</b>는 <b>$label</b>입니다.",
+    "centerlabel": "<b>$label</b>: $value",
+    "theme": "fusion"
+  },
+  "data": [
+    {
+      "label": "남성",
+      "value": "2100"
+    },
+    {
+      "label": "여성",
+      "value": "3200"
+    }
+  ]
+}""")
+    chartObj4 = FusionCharts( 'line', 'ex7', '600', '400', 'chart-7', 'json', """{
+  "chart": {
+    "caption": "구독자 수",
+    "yaxisname": "명",
+    "subcaption": "[2016-2021]",
+    "numbersuffix": " 명",
+    "rotatelabels": "1",
+    "setadaptiveymin": "1",
+    "theme": "fusion"
+  },
+  "data": [
+    {
+      "label": "2016",
+      "value": "89"
+    },
+    {
+      "label": "2017",
+      "value": "1452"
+    },
+    {
+      "label": "2018",
+      "value": "6740"
+    },
+    {
+      "label": "2019",
+      "value": "20453"
+    },
+    {
+      "label": "2020",
+      "value": "64201"
+    },
+    {
+      "label": "2021",
+      "value": "86752"
+    }
+  ]
+}""")
+    return  render(request, 'com_chart.html', {'output' : column2D.render(), 'output2':column2D2.render(), 'output3': chartObj.render(), 'output4': chartObj2.render(),'output5': chartObj3.render(),'output6': chartObj4.render(),'chartTitle': '기업 매출 그래프', 'chartTitle2': '기업 매출 그래프2'})
