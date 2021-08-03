@@ -9,7 +9,7 @@ dataSource: {
 "chart": {
     "caption": "구매자 평균 남녀성비",
     "subCaption": "2021.08",
-    "numberPrefix": "$",
+    "numberPrefix": "",
     "showPercentInTooltip": "0",
     "decimals": "1",
     "useDataPlotColorForLabels": "1",
@@ -28,4 +28,3 @@ dataSource: {
 );
     chartObj.render();
 });
-

@@ -360,5 +360,42 @@ def com_chart(request):
     return  render(request, 'com_chart.html', {'output' : column2D.render(), 'output2':column2D2.render(), 'output3': chartObj.render(), 'output4': chartObj2.render(),'output5': chartObj3.render(),'output6': chartObj4.render(),'chartTitle': '기업 매출 그래프', 'chartTitle2': '기업 매출 그래프2'})
 
 def product_chart(request):
-
-    return  render(request, 'product_chart.html')
+  # Chart data is passed to the `dataSource` parameter, as dictionary in the form of key-value pairs.
+   dataSource = OrderedDict() 
+   # The `chartConfig` dict contains key-value pairs data for chart attribute
+   chartConfig = OrderedDict()
+   chartConfig["caption"] = "월별 매출 현황"
+   chartConfig["subCaption"] = ""
+   chartConfig["xAxisName"] = "month"
+   chartConfig["yAxisName"] = "상품 매출(만원)"
+   chartConfig["numberSuffix"] = ""
+   chartConfig["theme"] = "fusion"  
+   # The `chartData` dict contains key-value pairs data
+   chartData = OrderedDict()
+   chartData["Jan"] = 290
+   chartData["Feb"] = 260
+   chartData["Mar"] = 180
+   chartData["Apr"] = 140
+   chartData["May"] = 115
+   chartData["Jun"] = 100
+   chartData["Jul"] = 30
+   chartData["Aug"] = 30
+   chartData["Sep"] = 30
+   chartData["Oct"] = 300
+   chartData["Nov"] = 450
+   chartData["Dec"] = 30  
+   dataSource["chart"] = chartConfig
+   dataSource["data"] = []  
+   # Convert the data in the `chartData` array into a format that can be consumed by FusionCharts.
+   # The data for the chart should be in an array wherein each element of the array is a JSON object
+   # having the `label` and `value` as keys.  
+   # Iterate through the data in `chartData` and insert in to the `dataSource['data']` list.
+   for key, value in chartData.items():
+       data = {}
+       data["label"] = key
+       data["value"] = value
+       dataSource["data"].append(data)  
+   # Create an object for the column 2D chart using the FusionCharts class constructor
+   # The chart data is passed to the `dataSource` parameter.
+   column2D = FusionCharts("column2d", "ex1" , "600", "400", "chart-1", "json", dataSource) 
+   return  render(request, 'product_chart.html', {'output' : column2D.render(), 'chartTitle': ''})
