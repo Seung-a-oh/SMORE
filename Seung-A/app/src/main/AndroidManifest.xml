@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SMORE">
-        <activity android:name=".DetailProduct"></activity>
+        <activity android:name=".SignUpSurvey"></activity>
+        <activity android:name=".SignUpPersonalInfo" />
+        <activity android:name=".ProductReview" />
+        <activity android:name=".DetailProduct" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

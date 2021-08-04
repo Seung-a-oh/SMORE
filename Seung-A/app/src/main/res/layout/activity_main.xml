@@ -1,177 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerHorizontal="true"
     android:background="@android:color/transparent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
 
-    <LinearLayout
-        android:layout_width="390dp"
-        android:layout_height="850dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="106dp">
-
-            <ImageView
-                android:id="@+id/SmoreLogo"
-                android:layout_width="139dp"
-                android:layout_height="53dp"
-                android:layout_marginTop="24dp"
-                android:contentDescription="SmoreLogo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/smore_logo" />
-
-            <ImageView
-                android:id="@+id/Search"
-                android:layout_width="33dp"
-                android:layout_height="36dp"
-                android:layout_marginTop="36dp"
-                android:layout_marginEnd="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/find" />
-
-            <ImageView
-                android:id="@+id/Category"
-                android:layout_width="40dp"
-                android:layout_height="27dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/menu" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <ImageButton
+            android:id="@+id/SmoreLogo"
+            android:layout_width="143dp"
             android:layout_height="44dp"
-            android:background="#EAE8E1">
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/smore_logo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <ImageButton
+            android:id="@+id/withme1"
+            android:layout_width="64dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+            app:srcCompat="@drawable/withme1" />
+
+        <ImageButton
+            android:id="@+id/withme2"
+            android:layout_width="79dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="17dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+            app:srcCompat="@drawable/withme2" />
+
+        <ImageButton
+            android:id="@+id/withme3"
+            android:layout_width="87dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="204dp"
+            android:layout_marginTop="24dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+            app:srcCompat="@drawable/withme3" />
+
+        <ImageButton
+            android:id="@+id/withme4"
+            android:layout_width="73dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="306dp"
+            android:layout_marginTop="22dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+            app:srcCompat="@drawable/withme4" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout8"
+            android:layout_width="395dp"
+            android:layout_height="40dp"
+            android:background="#F5F0E4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/BestCorpMent"
+                android:id="@+id/WithMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/gmarketmedium"
-                android:text="이 달의 우수 스타트업"
+                android:text="나와 함께하는 기업"
                 android:textColor="#000000"
-                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.521" />
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="322dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="158dp">
-
-            <ImageView
-                android:id="@+id/Bestcorp1"
-                android:layout_width="76dp"
-                android:layout_height="61dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="26dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/bestlogo1" />
-
-            <ImageView
-                android:id="@+id/Bestcorp2"
-                android:layout_width="118dp"
-                android:layout_height="68dp"
-                android:layout_marginStart="89dp"
-                android:layout_marginTop="24dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/bestlogo2" />
-
-            <ImageView
-                android:id="@+id/Bestcorp3"
-                android:layout_width="66dp"
-                android:layout_height="86dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="108dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/bestlogo3" />
-
-            <ImageView
-                android:id="@+id/Bestcorp4"
-                android:layout_width="96dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="22dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/bestlogo4" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:background="#EAE8E1">
+            android:id="@+id/constraintLayout3"
+            android:layout_width="395dp"
+            android:layout_height="40dp"
+            android:background="#F5F0E4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/CustomerMent"
+                android:id="@+id/ForYou"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/gmarketmedium"
-                android:text="'승아' 님이 선택하신 #친환경에 맞는 기업이에요!"
+                android:text="승아 님의 관심사 #친환경 에 맞는 기업"
                 android:textColor="#000000"
-                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="325dp">
+            android:id="@+id/constraintLayout4"
+            android:layout_width="87dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/FoUser3"
-                android:layout_width="wrap_content"
-                android:layout_height="109dp"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="218dp"
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="62dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/gmarketlight"
+                android:text="건강한 물품을 만드는 리빙 브랜드"
+                android:textSize="8sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <HorizontalScrollView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"/>
-                </HorizontalScrollView>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <ImageButton
-                android:id="@+id/ForUserLogo1"
-                android:layout_width="79dp"
-                android:layout_height="43dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="24dp"
+                android:id="@+id/imageButton34"
+                android:layout_width="43dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp"
                 android:adjustViewBounds="true"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
@@ -180,11 +168,11 @@
                 app:srcCompat="@drawable/oceanflow_logo" />
 
             <ImageButton
-                android:id="@+id/ForUserLgo2"
-                android:layout_width="95dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="120dp"
+                android:id="@+id/imageButton35"
+                android:layout_width="60dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="104dp"
                 android:adjustViewBounds="true"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
@@ -193,11 +181,11 @@
                 app:srcCompat="@drawable/erigeron_logo" />
 
             <ImageButton
-                android:id="@+id/ForUserLogo3"
-                android:layout_width="92dp"
-                android:layout_height="27dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="235dp"
+                android:id="@+id/imageButton36"
+                android:layout_width="64dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="200dp"
                 android:adjustViewBounds="true"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
@@ -205,158 +193,952 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/mamaforest_logo" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/ForUser1"
+            <TextView
+                android:id="@+id/textView5"
                 android:layout_width="wrap_content"
-                android:layout_height="109dp"
-                android:layout_marginStart="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="와이제이에스"
+                android:textColor="#000000"
+                android:textSize="10sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <HorizontalScrollView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"/>
-                </HorizontalScrollView>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/ForUser2"
-                android:layout_width="wrap_content"
-                android:layout_height="109dp"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="109dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <HorizontalScrollView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="1000dp"
-                        android:layout_height="match_parent">
-
-                        <ImageButton
-                            android:id="@+id/for2_1"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginTop="15dp"
-                            android:adjustViewBounds="true"
-                            android:background="@android:color/transparent"
-                            android:scaleType="fitCenter"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/erigeron1" />
-
-                        <ImageButton
-                            android:id="@+id/for2_2"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginTop="15dp"
-                            android:adjustViewBounds="true"
-                            android:background="@android:color/transparent"
-                            android:scaleType="fitCenter"
-                            app:layout_constraintStart_toEndOf="@+id/for2_1"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/erigeron2" />
-
-                        <ImageButton
-                            android:id="@+id/for2"
-                            android:layout_width="162dp"
-                            android:layout_height="68dp"
-                            android:layout_marginStart="400dp"
-                            android:layout_marginTop="20dp"
-                            android:adjustViewBounds="true"
-                            android:background="@android:color/transparent"
-                            android:scaleType="fitCenter"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/erigeron3" />
-
-                        <ImageButton
-                            android:id="@+id/for2_3"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginTop="15dp"
-                            android:adjustViewBounds="true"
-                            android:background="@android:color/transparent"
-                            android:scaleType="fitCenter"
-                            app:layout_constraintStart_toEndOf="@+id/for2_2"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/erigeron3" />
-
-                        <ImageButton
-                            android:id="@+id/for2_4"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginTop="15dp"
-                            android:adjustViewBounds="true"
-                            android:background="@android:color/transparent"
-                            android:scaleType="fitCenter"
-                            app:layout_constraintStart_toEndOf="@+id/for2_3"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/erigeron4" />
-
-                        <ImageButton
-                            android:id="@+id/for2_5"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_marginStart="360dp"
-                            android:layout_marginTop="16dp"
-                            android:adjustViewBounds="true"
-                            android:background="@android:color/transparent"
-                            android:scaleType="fitCenter"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/erigeron5" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </HorizontalScrollView>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:background="#EAE8E1">
+                app:layout_constraintTop_toBottomOf="@+id/imageButton35" />
 
             <TextView
-                android:id="@+id/PreuserMent"
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="마마포레스트"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton36" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="(주)오션플로우"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton34" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="65dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/gmarketlight"
+                android:text="친환경 원료로 개발된 애견 용품"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="65dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/gmarketlight"
+                android:text="친환경 제로 웨이스트 상품"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="304dp"
+            android:layout_height="94dp"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/BestOcean2"
+                    android:layout_width="61dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="106dp"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ocean1" />
+
+                <ImageButton
+                    android:id="@+id/BestOcean1"
+                    android:layout_width="54dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="12dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ocean2" />
+
+                <ImageButton
+                    android:id="@+id/BestOcean3"
+                    android:layout_width="59dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="192dp"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ocean3" />
+
+                <ImageButton
+                    android:id="@+id/BestOcean4"
+                    android:layout_width="69dp"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ocean4" />
+
+                <ImageButton
+                    android:id="@+id/BestOcean5"
+                    android:layout_width="69dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="385dp"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ocean5" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:text="아반펫 쿨매트 M 보스턴테리어"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BestOcean1" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="104dp"
+                    android:layout_marginTop="8dp"
+                    android:text="아반펫 쿨매트 xs 치와와"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BestOcean2" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="188dp"
+                    android:layout_marginTop="5dp"
+                    android:text="아반키 사파리 쿨잠 세트 L사이즈"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BestOcean3" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="3dp"
+                    android:text="아반키 사파리 쿨잠 세트 L사이즈"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BestOcean4" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="396dp"
+                    android:layout_marginTop="1dp"
+                    android:text="아반키 쿨링 넥밴드"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BestOcean5" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="28dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="40dp"
+                    android:text="70,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="28dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="125dp"
+                    android:text="30,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="28dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="208dp"
+                    android:text="210,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="39dp"
+                    android:layout_height="11dp"
+                    android:layout_marginStart="410dp"
+                    android:text="30,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="28dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="313dp"
+                    android:layout_marginTop="2dp"
+                    android:text="210,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView2"
+            android:layout_width="304dp"
+            android:layout_height="94dp"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/erigeron1" />
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="110dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/erigeron2" />
+
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:layout_width="60dp"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="195dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.133"
+                    app:srcCompat="@drawable/erigeron3" />
+
+                <ImageButton
+                    android:id="@+id/imageButton7"
+                    android:layout_width="60dp"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="288dp"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/erigeron4" />
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="60dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="380dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/erigeron5" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="74dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="68dp"
+                    android:text="비건 샴푸볼 -스노우오트밀"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="108dp"
+                    android:layout_marginTop="68dp"
+                    android:text="비건 샴푸볼 - 핑크클레이"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="194dp"
+                    android:layout_marginTop="68dp"
+                    android:text="비건 샴푸볼 - 블랙 차콜"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="286dp"
+                    android:layout_marginTop="68dp"
+                    android:text="비건 샴푸볼 - 어성초 그린"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="376dp"
+                    android:layout_marginTop="68dp"
+                    android:text="에리제론 햄프씨드 멀티밤"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="404dp"
+                    android:text="비건 샴푸볼 - 핑크클레이"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="78dp"
+                    android:text="19,200"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginTop="76dp"
+                    android:text="19,200"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="212dp"
+                    android:layout_marginTop="76dp"
+                    android:text="19,200"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="308dp"
+                    android:layout_marginTop="76dp"
+                    android:text="19,200"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="400dp"
+                    android:layout_marginTop="76dp"
+                    android:text="28,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="304dp"
+            android:layout_height="94dp"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/mama1"
+                    android:layout_width="56dp"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="4dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mama_prodect" />
+
+                <ImageButton
+                    android:id="@+id/imageButton19"
+                    android:layout_width="58dp"
+                    android:layout_height="62dp"
+                    android:layout_marginStart="106dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mamaforest1" />
+
+                <ImageButton
+                    android:id="@+id/imageButton20"
+                    android:layout_width="58dp"
+                    android:layout_height="62dp"
+                    android:layout_marginStart="190dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mamaforest3" />
+
+                <ImageButton
+                    android:id="@+id/imageButton22"
+                    android:layout_width="83dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="280dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mamaforest4" />
+
+                <ImageButton
+                    android:id="@+id/imageButton23"
+                    android:layout_width="76dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="388dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mamaforest5" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="70dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="68dp"
+                    android:text=" 내추럴 디쉬바 엔젤베이비 - 영유아식기전용 천연주방세제"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="102dp"
+                    android:layout_marginTop="68dp"
+                    android:text="식기세척기 용도 1종 주방세제 파우더"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="188dp"
+                    android:layout_marginTop="68dp"
+                    android:text="내추럴 대나무 칫솔 세트"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="288dp"
+                    android:layout_marginTop="68dp"
+                    android:text="천연주방세제 베이직 키트"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="406dp"
+                    android:layout_marginTop="68dp"
+                    android:text="친환경 보냉백"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="76dp"
+                    android:text="10,500"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="124dp"
+                    android:layout_marginTop="76dp"
+                    android:text="14,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="208dp"
+                    android:layout_marginTop="76dp"
+                    android:text="3,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="308dp"
+                    android:layout_marginTop="76dp"
+                    android:text="26,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="410dp"
+                    android:layout_marginTop="76dp"
+                    android:text="19,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout7"
+            android:layout_width="391dp"
+            android:layout_height="40dp"
+            android:background="#F5F0E4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/BestCorp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/gmarketmedium"
-                android:text="구독자님을 위한 체험 존!"
+                android:text="우수 기업"
                 android:textColor="#000000"
-                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/imageButton30"
+            android:layout_width="53dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
+            app:srcCompat="@drawable/bestlogo1" />
 
+        <ImageButton
+            android:id="@+id/imageButton31"
+            android:layout_width="78dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
+            app:srcCompat="@drawable/bestlogo2" />
+
+        <ImageButton
+            android:id="@+id/imageButton32"
+            android:layout_width="73dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="6dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
+            app:srcCompat="@drawable/bestlogo3" />
+
+        <ImageButton
+            android:id="@+id/imageButton33"
+            android:layout_width="81dp"
+            android:layout_height="79dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
+            app:srcCompat="@drawable/bestlogo4" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="68dp"
+            android:text="조인앤조인"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="68dp"
+            android:text="바스큘러 인터페이스"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="236dp"
+            android:layout_marginTop="68dp"
+            android:text="니즈"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="325dp"
+            android:layout_marginTop="68dp"
+            android:text="이랑텍"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout9"
+            android:layout_width="391dp"
+            android:layout_height="40dp"
+            android:background="#F5F0E4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/PreUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="나무 기르기"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
+        <ImageButton
+            android:id="@+id/imageButton37"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="14dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+            app:srcCompat="@drawable/preuser3" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/imageButton38"
+            android:layout_width="84dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toEndOf="@+id/imageButton37"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+            app:srcCompat="@drawable/preuser1" />
+
+        <ImageButton
+            android:id="@+id/imageButton39"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toEndOf="@+id/imageButton38"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+            app:srcCompat="@drawable/preuser5" />
+
+        <ImageButton
+            android:id="@+id/imageButton40"
+            android:layout_width="105dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="295dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+            app:srcCompat="@drawable/survey" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAE3D2">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="28dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bar_category" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="30dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bar_search" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="35dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bar_home" />
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="30dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bar_plant" />
+
+        <ImageButton
+            android:id="@+id/imageButton11"
+            android:layout_width="35dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bar_my" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
