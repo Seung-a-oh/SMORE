@@ -397,5 +397,5 @@ def product_chart(request):
        dataSource["data"].append(data)  
    # Create an object for the column 2D chart using the FusionCharts class constructor
    # The chart data is passed to the `dataSource` parameter.
-   column2D = FusionCharts("column2d", "ex1" , "600", "400", "chart-1", "json", dataSource) 
+   column2D = FusionCharts("column2d", "ex1" , "620", "350", "chart-1", "json", dataSource) 
    return  render(request, 'product_chart.html', {'output' : column2D.render(), 'chartTitle': ''})
