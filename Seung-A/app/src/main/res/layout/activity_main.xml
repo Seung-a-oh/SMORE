@@ -309,8 +309,8 @@
 
                 <ImageButton
                     android:id="@+id/BestOcean4"
-                    android:layout_width="73dp"
-                    android:layout_height="65dp"
+                    android:layout_width="69dp"
+                    android:layout_height="57dp"
                     android:layout_marginStart="290dp"
                     android:layout_marginTop="5dp"
                     android:adjustViewBounds="true"
@@ -335,11 +335,11 @@
 
                 <TextView
                     android:id="@+id/textView15"
-                    android:layout_width="61dp"
-                    android:layout_height="18dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:text="아반펫 프리미엄 쿨매트 M 보스턴테리어"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:text="아반펫 쿨매트 M 보스턴테리어"
                     android:textColor="#000000"
                     android:textSize="6sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -347,20 +347,57 @@
 
                 <TextView
                     android:id="@+id/textView18"
-                    android:layout_width="61dp"
-                    android:layout_height="18dp"
-                    android:layout_marginStart="106dp"
-                    android:text="아반펫 프리미엄 쿨매트 xs 치와와"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="104dp"
+                    android:layout_marginTop="8dp"
+                    android:text="아반펫 쿨매트 xs 치와와"
                     android:textColor="#000000"
                     android:textSize="6sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/BestOcean2" />
 
                 <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="188dp"
+                    android:layout_marginTop="5dp"
+                    android:text="아반키 사파리 쿨잠 세트 L사이즈"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BestOcean3" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="3dp"
+                    android:text="아반키 사파리 쿨잠 세트 L사이즈"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BestOcean4" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="396dp"
+                    android:layout_marginTop="1dp"
+                    android:text="아반키 쿨링 넥밴드"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BestOcean5" />
+
+                <TextView
                     android:id="@+id/textView17"
                     android:layout_width="28dp"
                     android:layout_height="10dp"
-                    android:layout_marginStart="38dp"
+                    android:layout_marginStart="40dp"
                     android:text="70,000"
                     android:textColor="#000000"
                     android:textSize="8sp"
@@ -371,12 +408,46 @@
                     android:id="@+id/textView19"
                     android:layout_width="28dp"
                     android:layout_height="10dp"
-                    android:layout_marginStart="122dp"
+                    android:layout_marginStart="125dp"
                     android:text="30,000"
                     android:textColor="#000000"
                     android:textSize="8sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="28dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="208dp"
+                    android:text="210,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="39dp"
+                    android:layout_height="11dp"
+                    android:layout_marginStart="410dp"
+                    android:text="30,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="28dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="313dp"
+                    android:layout_marginTop="2dp"
+                    android:text="210,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </HorizontalScrollView>
@@ -458,6 +529,138 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/erigeron5" />
 
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="74dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="68dp"
+                    android:text="비건 샴푸볼 -스노우오트밀"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="108dp"
+                    android:layout_marginTop="68dp"
+                    android:text="비건 샴푸볼 - 핑크클레이"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="194dp"
+                    android:layout_marginTop="68dp"
+                    android:text="비건 샴푸볼 - 블랙 차콜"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="286dp"
+                    android:layout_marginTop="68dp"
+                    android:text="비건 샴푸볼 - 어성초 그린"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="376dp"
+                    android:layout_marginTop="68dp"
+                    android:text="에리제론 햄프씨드 멀티밤"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="404dp"
+                    android:text="비건 샴푸볼 - 핑크클레이"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="78dp"
+                    android:text="19,200"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginTop="76dp"
+                    android:text="19,200"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="212dp"
+                    android:layout_marginTop="76dp"
+                    android:text="19,200"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="308dp"
+                    android:layout_marginTop="76dp"
+                    android:text="19,200"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="400dp"
+                    android:layout_marginTop="76dp"
+                    android:text="28,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </HorizontalScrollView>
 
@@ -474,7 +677,7 @@
                 <ImageButton
                     android:id="@+id/mama1"
                     android:layout_width="56dp"
-                    android:layout_height="53dp"
+                    android:layout_height="57dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="4dp"
                     android:adjustViewBounds="true"
@@ -510,9 +713,9 @@
 
                 <ImageButton
                     android:id="@+id/imageButton22"
-                    android:layout_width="70dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="293dp"
+                    android:layout_width="83dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="280dp"
                     android:adjustViewBounds="true"
                     android:background="@android:color/transparent"
                     android:scaleType="fitCenter"
@@ -522,8 +725,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton23"
-                    android:layout_width="72dp"
-                    android:layout_height="56dp"
+                    android:layout_width="76dp"
+                    android:layout_height="58dp"
                     android:layout_marginStart="388dp"
                     android:adjustViewBounds="true"
                     android:background="@android:color/transparent"
@@ -531,6 +734,126 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/mamaforest5" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="70dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="68dp"
+                    android:text=" 내추럴 디쉬바 엔젤베이비 - 영유아식기전용 천연주방세제"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="102dp"
+                    android:layout_marginTop="68dp"
+                    android:text="식기세척기 용도 1종 주방세제 파우더"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="188dp"
+                    android:layout_marginTop="68dp"
+                    android:text="내추럴 대나무 칫솔 세트"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="288dp"
+                    android:layout_marginTop="68dp"
+                    android:text="천연주방세제 베이직 키트"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="70dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="406dp"
+                    android:layout_marginTop="68dp"
+                    android:text="친환경 보냉백"
+                    android:textColor="#000000"
+                    android:textSize="6sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="76dp"
+                    android:text="10,500"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="124dp"
+                    android:layout_marginTop="76dp"
+                    android:text="14,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="208dp"
+                    android:layout_marginTop="76dp"
+                    android:text="3,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="308dp"
+                    android:layout_marginTop="76dp"
+                    android:text="26,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="410dp"
+                    android:layout_marginTop="76dp"
+                    android:text="19,000"
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </HorizontalScrollView>
@@ -570,7 +893,7 @@
             android:layout_width="53dp"
             android:layout_height="57dp"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
@@ -583,13 +906,12 @@
             android:layout_width="78dp"
             android:layout_height="54dp"
             android:layout_marginStart="105dp"
+            android:layout_marginTop="16dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
-            app:layout_constraintVertical_bias="0.555"
             app:srcCompat="@drawable/bestlogo2" />
 
         <ImageButton
@@ -597,7 +919,7 @@
             android:layout_width="73dp"
             android:layout_height="71dp"
             android:layout_marginStart="208dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
@@ -609,7 +931,7 @@
             android:id="@+id/imageButton33"
             android:layout_width="81dp"
             android:layout_height="79dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="6dp"
             android:layout_marginEnd="16dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
@@ -617,6 +939,54 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout7"
             app:srcCompat="@drawable/bestlogo4" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="68dp"
+            android:text="조인앤조인"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="68dp"
+            android:text="바스큘러 인터페이스"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="236dp"
+            android:layout_marginTop="68dp"
+            android:text="니즈"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="325dp"
+            android:layout_marginTop="68dp"
+            android:text="이랑텍"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
