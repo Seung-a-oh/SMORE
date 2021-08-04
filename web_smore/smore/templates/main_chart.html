@@ -1,0 +1,55 @@
+<!-- 주문, 배송, 통계로 나눠서 한눈에 볼 수 있게
+통계 : 매출, 구매율이 높은 해시태그, 별점 -->
+<!-- 
+    막대 그래프 : 이번년도 매출
+    선 그래프 : 최근 10년 매출 추이
+    파이 그래프 : 구매율이 높은 해시태그
+    가로 막대 그래프 : 별점 순위 > 가능하다면 별점 별 리뷰도 하기
+ -->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Main Chart {% endblock %}
+{% block link %}{% static 'css/main_chart.css' %}{% endblock %}
+{% block content %}
+<script>
+	$(document).ready( function() {
+        $('#lastYear').click( function() {
+          $('#chart-1').toggle( 'slow' );
+          $('#chart-2').toggle( 'slow' );
+		  var text = $('#lastYear').text();
+		  if (text == '최근 10년 매출보기'){
+			$('#lastYear').text('올해 매출보기')
+		  }else {
+			$('#lastYear').text('최근 10년 매출보기')
+		  }
+		  if ($(this).hasClass('changeColor')) {
+			  $(this).removeClass('changeColor')
+		  }else {
+			  $(this).addClass('changeColor')
+		  }
+        });
+      });
+</script>
+<div id="chart">
+	<div class="chartBoxCol">
+        <span>우리 기업의 매출 현황</span>
+		<button id="lastYear" class="chartButton">최근 10년 매출보기</button>
+		<div class="chartDetail">
+			<div id="chart-1">{{ output|safe }}</div>
+			<div id="chart-2"style="display: none;">{{ output2|safe }}</div>
+		</div>
+        <span>구매율이 높은 해시태그</span>
+        <div class="chartDetail">
+            <div id="chart-3">{{ output3|safe }}</div>
+        </div>
+	</div>
+
+    <div class="chartBox">
+        <span>우리 회사 별점</span>
+        <div class="chartDetail">
+            <div id="chart-4">{{ output4|safe }}</div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
