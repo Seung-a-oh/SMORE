@@ -1,388 +1,646 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ProductReview">
 
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="792dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/smoreLogo2"
+                    android:layout_width="139dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="SmoreLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/smore_logo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#F5F0E4">
+
+                <TextView
+                    android:id="@+id/corporation2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/gmarketmedium"
+                    android:text="mamaforest / 제품"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.521" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="370dp">
+
+                <ImageView
+                    android:id="@+id/ProductPhoto"
+                    android:layout_width="199dp"
+                    android:layout_height="218dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mama_prodect" />
+
+                <TextView
+                    android:id="@+id/ProductName"
+                    android:layout_width="364dp"
+                    android:layout_height="42dp"
+                    android:layout_marginBottom="72dp"
+                    android:fontFamily="@font/gmarketmedium"
+                    android:text="내추럴 디쉬바 엔젤베이비 - 영유아식기전용 천연주방세제"
+                    android:textColor="#676060"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.862"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/Shipment"
+                    android:layout_width="339dp"
+                    android:layout_height="18dp"
+                    android:layout_marginBottom="27dp"
+                    android:fontFamily="@font/gmarketlight"
+                    android:text="배송비: 3,000원 (40,000원 이상 구매 시 무료)"
+                    android:textColor="#676060"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.466"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/ShipPeriod"
+                    android:layout_width="337dp"
+                    android:layout_height="16dp"
+                    android:layout_marginBottom="11dp"
+                    android:fontFamily="@font/gmarketlight"
+                    android:text="배송 기간 : 주문 후 배송완료까지 1일 ~ 3일(영업일 기준) 소요"
+                    android:textColor="#676060"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.451"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/ProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="55dp"
+                    android:fontFamily="@font/gmarketmedium"
+                    android:text="10,500"
+                    android:textColor="#676060"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#F5F0E4">
+
+                <Button
+                    android:id="@+id/reviewButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="220dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/gmarketmedium"
+                    android:text="리뷰"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/detailPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/gmarketmedium"
+                    android:text="상세 정보"
+                    android:textColor="#6C6C6C"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/gmarketmedium"
+                    android:text="4.8/5"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@android:color/transparent"
+                    android:text="+ 더보기"
+                    android:textColor="#938F8E"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="357dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#FAF9F8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+                    <ImageView
+                        android:id="@+id/leaf5"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="150dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView14"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="110dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="130dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="337dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:text="베이비페어에서 처음 접한 이후 쭉 이 제품만 쓰고 있어요! 거품도 잘나고 뽀드득함도 최고에 성분도 믿음이 가용!^^"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/gmarketmedium"
+                        android:text="cod38"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="357dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="50dp"
+                    android:background="#FAF9F8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="140dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/gmarketmedium"
+                        android:text="thdwud"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="337dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:text="아기를 가지고 출산하며 성분을 많이 따지게됐는데 원래 전성분이 괜찮다는 다른제품을 한번썼는데 너무 거품이 사그라들고 ... 더보기"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="357dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#FAF9F8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="140dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="337dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:text="일 년 동안 먹는 세제 양 읽어본 뒤 바로 구매했어요~ 평소 머리도 샴푸바를 사용했어서 디쉬바 본 뒤에 사야지 했는데 자꾸 ... 더보기"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/gmarketmedium"
+                        android:text="emfemf20"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="357dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#FAF9F8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                    <ImageView
+                        android:id="@+id/leaf6"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="170dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/leaf7"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/leaf8"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="110dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/leaf9"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="130dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/leaf10"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="150dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <TextView
+                        android:id="@+id/review3"
+                        android:layout_width="337dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:text="아기 식기류 씻을려고 샀어요. 고체가 세제 잔여가 없다고해서 구매하긴했는데 물 묻은 비누에 세균이 많이 번식한다고 들었는데 ... 더보기"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Rid3" />
+
+                    <TextView
+                        android:id="@+id/Rid3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/gmarketmedium"
+                        android:text="akd13akd"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    android:layout_width="357dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#FAF9F8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                    <ImageView
+                        android:id="@+id/leaf1"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/leaf2"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="110dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <ImageView
+                        android:id="@+id/leaf3"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="130dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/leaf" />
+
+                    <TextView
+                        android:id="@+id/review4"
+                        android:layout_width="337dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:text="저랑은 안맞나봐요 생각보다 거품도 잘나는데.. 마르고나서가 뭔가 안깨끗한거같아요ㅠ 마음만 위안이랄까..."
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Rid4" />
+
+                    <TextView
+                        android:id="@+id/Rid4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/gmarketmedium"
+                        android:text="gusqkqh"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="#EAE3D2">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp">
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="28dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bar_category" />
 
-            <ImageView
-                android:id="@+id/smoreLogo2"
-                android:layout_width="139dp"
-                android:layout_height="53dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="SmoreLogo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/smore_logo" />
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="30dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bar_search" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="35dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bar_home" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:background="#EAE8E1">
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="30dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bar_plant" />
 
-            <TextView
-                android:id="@+id/corporation2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:fontFamily="@font/gmarketmedium"
-                android:text="mamaforest / 제품"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.521" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/imageButton11"
+            android:layout_width="35dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bar_my" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="350dp">
-
-            <ImageView
-                android:id="@+id/ProductPhoto"
-                android:layout_width="199dp"
-                android:layout_height="218dp"
-                android:layout_marginTop="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/mama_prodect" />
-
-            <TextView
-                android:id="@+id/ProductName"
-                android:layout_width="364dp"
-                android:layout_height="42dp"
-                android:layout_marginBottom="50dp"
-                android:fontFamily="@font/gmarketmedium"
-                android:text="내추럴 디쉬바 엔젤베이비 - 영유아식기전용 천연주방세제"
-                android:textColor="#676060"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.862"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/ProductPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="@font/gmarketmedium"
-                android:text="10,500"
-                android:textColor="#676060"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:background="#EAE8E1">
-
-            <Button
-                android:id="@+id/reviewButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="220dp"
-                android:background="@android:color/transparent"
-                android:fontFamily="@font/gmarketmedium"
-                android:text="리뷰"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/detailPage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:fontFamily="@font/gmarketmedium"
-                android:text="상세 정보"
-                android:textColor="#6C6C6C"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="357dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="60dp"
-                android:background="#FAF9F8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="80dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="100dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="120dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="140dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="160dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/gmarketmedium"
-                    android:text="thdwud"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="337dp"
-                    android:layout_height="38dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:text="아기를 가지고 출산하며 성분을 많이 따지게됐는데 원래 전성분이 괜찮다는 다른제품을 한번썼는데 너무 거품이 사그라들고 ... 더보기"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
-                android:layout_width="357dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="16dp"
-                android:background="#FAF9F8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="100dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="120dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="140dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="160dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="337dp"
-                    android:layout_height="38dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:text="일 년 동안 먹는 세제 양 읽어본 뒤 바로 구매했어요~ 평소 머리도 샴푸바를 사용했어서 디쉬바 본 뒤에 사야지 했는데 자꾸 ... 더보기"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/gmarketmedium"
-                    android:text="emfemf20"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="357dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="16dp"
-                android:background="#FAF9F8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
-
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="170dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="90dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView13"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="110dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView14"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="130dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <ImageView
-                    android:id="@+id/imageView15"
-                    android:layout_width="21dp"
-                    android:layout_height="23dp"
-                    android:layout_marginStart="150dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/LeafScore" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="337dp"
-                    android:layout_height="38dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:text="아기 식기류 씻을려고 샀어요. 고체가 세제 잔여가 없다고해서 구매하긴했는데 물 묻은 비누에 세균이 많이 번식한다고 들었는데 ... 더보기"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/gmarketmedium"
-                    android:text="akd13akd"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="22dp"
-                android:fontFamily="@font/gmarketmedium"
-                android:text="4.8/5"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
