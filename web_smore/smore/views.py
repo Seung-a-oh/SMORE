@@ -397,5 +397,162 @@ def product_chart(request):
        dataSource["data"].append(data)  
    # Create an object for the column 2D chart using the FusionCharts class constructor
    # The chart data is passed to the `dataSource` parameter.
-   column2D = FusionCharts("column2d", "ex1" , "620", "350", "chart-1", "json", dataSource) 
-   return  render(request, 'product_chart.html', {'output' : column2D.render(), 'chartTitle': ''})
+
+def main_chart(request):
+  dataSource = OrderedDict()
+
+  chartConfig = OrderedDict()
+  chartConfig["caption"] = "[2021] 기업 매출 현황"
+  chartConfig["subCaption"] = "2021년도 매출"
+  chartConfig["xAxisName"] = "월별"
+  chartConfig["yAxisName"] = "상품 판매 개수"
+  chartConfig["numberSuffix"] = "개"
+  chartConfig["theme"] = "fusion"
+
+  chartData = OrderedDict()
+  chartData["1월"] = 120
+  chartData["2월"] = 90
+  chartData["3월"] = 129
+  chartData["4월"] = 134
+  chartData["5월"] = 157
+  chartData["6월"] = 93
+  chartData["7월"] = 113
+  chartData["8월"] = 153
+  chartData["9월"] = 135
+  chartData["10월"] = 89
+  chartData["11월"] = 142
+  chartData["12월"] = 133
+  dataSource["chart"] = chartConfig
+  dataSource["data"] = []
+
+  for key, value in chartData.items():
+      data = {}
+      data["label"] = key
+      data["value"] = value
+      dataSource["data"].append(data)
+  column2D = FusionCharts("column2d", "ex1" , "650", "350", "chart-1", "json", dataSource)
+  chartObj = FusionCharts( 'line', 'ex2', '700', '350', 'chart-2', 'json', """{
+  "chart": {
+    "caption": "최근 10년간 매출 추이",
+    "yaxisname": "만원",
+    "subcaption": "[2011-2021]",
+    "numbersuffix": " 만원",
+    "rotatelabels": "1",
+    "setadaptiveymin": "1",
+    "theme": "fusion"
+  },
+  "data": [
+    {
+      "label": "2011",
+      "value": "12229"
+    },
+    {
+      "label": "2012",
+      "value": "8249"
+    },
+    {
+      "label": "2013",
+      "value": "9245"
+    },
+    {
+      "label": "2014",
+      "value": "15584"
+    },
+    {
+      "label": "2015",
+      "value": "18529"
+    },
+    {
+      "label": "2016",
+      "value": "14289"
+    },
+    {
+      "label": "2017",
+      "value": "19562"
+    },
+    {
+      "label": "2018",
+      "value": "16240"
+    },
+    {
+      "label": "2019",
+      "value": "24153"
+    },
+    {
+      "label": "2020",
+      "value": "24091"
+    },
+    {
+      "label": "2021",
+      "value": "31032"
+    }
+  ]
+}""")
+  chartObj2 = FusionCharts( 'doughnut2d', 'ex3', '650', '350', 'chart-3', 'json', """{
+    "chart": {
+      "caption": "구매율이 높은 해시태그",
+      "subcaption": "2021년 구매율",
+      "showpercentvalues": "1",
+      "defaultcenterlabel": "구매자 통계",
+      "aligncaptionwithcanvas": "0",
+      "captionpadding": "0",
+      "decimals": "1",
+      "plottooltext": "판매된 상품의 <b>$percentValue</b>는 <b>$label</b>입니다",
+      "centerlabel": "<b>$label</b>: $value",
+      "theme": "fusion"
+    },
+    "data": [
+      {
+        "label": "#재활용",
+        "value": "10000"
+      },
+      {
+        "label": "#리사이클링",
+        "value": "5300"
+      },
+      {
+        "label": "#친환경",
+        "value": "10500"
+      },
+      {
+        "label": "#재활용기",
+        "value": "8900"
+      },
+      {
+        "label": "그 외",
+        "value": "4000"
+      }
+    ]
+  }""")
+  chartObj3 = FusionCharts( 'bar2d', 'ex4', '700', '350', 'chart-4', 'json', """{
+    "chart": {
+      "caption": "우리 회사 별점",
+      "yaxisname": "평가한 사용자 수",
+      "aligncaptionwithcanvas": "0",
+      "plottooltext": "<b>$dataValue</b>명은 우리 회사를 <b>$label</b>점으로 평가함",
+      "theme": "fusion"
+    },
+    "data": [
+      {
+        "label": "5",
+        "value": "4311"
+      },
+      {
+        "label": "4",
+        "value": "3149"
+      },
+      {
+        "label": "3",
+        "value": "138"
+      },
+      {
+        "label": "2",
+        "value": "32"
+      },
+      {
+        "label": "1",
+        "value": "6"
+      }
+    ]
+  }""")
+  return render(request, 'main_chart.html', {'output' : column2D.render(), 'output2': chartObj.render(), 'output3': chartObj2.render(),'output4': chartObj3.render()})

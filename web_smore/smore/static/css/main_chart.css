@@ -2,27 +2,40 @@
     margin: 0px;
 }
 #chart {
-    width: 100%; height: 100%;
+    width: 1400px; height: 1000px;
     display: flex;
     flex-wrap: wrap;
     padding-top: 50%;
+    background-color: antiquewhite;
 }
 .chartBox {
     width: 700px; height: 400px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    flex-direction: column;
     justify-content: space-between;
     margin:20px;
+    background-color: aqua;
+}
+.chartBoxCol {
+    width: 700px; height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin:20px;
+    background-color: aqua;
 }
 .chartDetail {
     width: 100%; height: 360px;
+    background-color: black;
 }
 .chartButton {
     background-color: #d2dcf8;
     border: #adc2fa 2px solid;
     border-radius: 2px;
-    width: 100px; height: 34px;
+    width: 140px; height: 34px;
     margin-right: 50px;
     margin-bottom: 7px;
 }
