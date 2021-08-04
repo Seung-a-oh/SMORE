@@ -5,22 +5,45 @@
 {% block content %}
 <form method="POST" action="{% url 'exper_create' %}" enctype="multipart/form-data">
     {% csrf_token %}
-    <input name="exper_title" type="text" placeholdㅉer="체험명을 입력하세요."><br>
-    <input name="exper_body" type="text" placeholder="체험단 설명을 입력하세요.">
-    <input name="exper_period" type="text" placeholder="활동기간 YYYY-MM-DD ~ YYYY-MM-DD">
-    <p>물건 이미지 : <input class="int" type="file" name="exper_image" required></p>
-        <!-- wrapper -->
-        <div id="wrapper">
-            <!-- content-->
-            <div id="content">
-                <!-- JOIN BTN-->
-                <div class="btn_area">
-                    <button id="btnJoin">
-                        로그인
-                    </button>
-                    <p style="text-align: center;"><a href="{% url 'create' %}" style="color:black;">상품등록</a></p>
-                </div>
-            </div> 
-        </div> 
+    <h5 class="signup-title" style="color: rgb(71, 71, 71);">체험단 모집 등록</h5>
+    <div class="form-back">
+        <div class="btn_area">
+                <div>
+                    <button class="btn" style="font-size: 15px;">
+                    등록
+                </button>
+            </div>
+        </div>
+        <!-- input -->
+        <div class="box-box">
+            <span class="box">
+                <p style="font-size: 5px;">title</p>
+                <input class="int" type="text" name="exper_title" placeholder="제목을 입력하세요" required><br>
+            </span>
+        </div>      
+        <!-- input -->
+        <div class="box-box">
+            <span class="box">
+                <p style="font-size: 5px;">활동 기간</p>
+                <input class="int" type="text" name="exper_period" placeholder="YYYY-MM-DD ~ YYYY-MM-DD"required><br>
+            </span>
+        </div>
+
+        <!-- profileImg -->
+        <div class="box-box">
+            <span class="box">
+                <p style="font-size: 5px;">모집 이미지</p>
+                <input class="int" type="file" name="exper_image" accept="image/*" required><br>
+            </span>
+        </div>      
+        <!-- profileImg -->
+        <div class="box-box">
+            <span class="box">
+                <p style="font-size: 5px;">체험단 설명</p>
+                <input class="int" type="text" name="exper_body" placeholder="체험단 설명" ><br>
+            </span>
+        </div>
+    </div>
 </form>
+
 {% endblock %} 

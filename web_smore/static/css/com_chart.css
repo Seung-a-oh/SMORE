@@ -1,0 +1,8 @@
+
+#content {
+    position: absolute;
+    left: 230%;
+    transform: translate(-50%);
+    width: 460px;
+    padding-left: 30%;
+}

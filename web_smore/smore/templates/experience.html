@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% load static %}
 {% block title %} home {% endblock %}
 {% block link %}{% endblock %}
 {% block content %}
@@ -18,8 +20,6 @@
         </p>
         <p><a style="color:black" class="detail" href="{% url 'exper_detail' exper.id %}">자세히보기</a></p>
         <hr>
-        
     </div>
     {% endfor %}
-
 {% endblock %} 
