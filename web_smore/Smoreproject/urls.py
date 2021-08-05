@@ -41,4 +41,5 @@ urlpatterns = [
     path('main_chart', S.main_chart, name="main_chart"),
     path('com_chart',S.com_chart, name="com_chart"),
     path('product_chart', S.product_chart, name="product_chart"),
+    path('research_chart', S.research_chart, name="research_chart"),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

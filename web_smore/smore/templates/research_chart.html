@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Research Chart {% endblock %}
+{% block link %}{% static 'css/research_chart.css' %}{% endblock %}
+{% block content %}
+<!-- 
+    1. 우리기업을 구독한 이유를 골라주세요.
+    제품을 사용해본 경험이 있어서
+    가치관에 맞는 스타트업이라서
+    디자인이 마음에 들어서
+    SNS 홍보를 통해서
+    > 다른 이유?
+
+    2. 우리 기업의 첫 이미지를 작성해주세요.
+
+    3. 우리 기업의 강점을 골라주세요.
+    기업의 가치관(친환경)
+    제품 디자인
+    제품 품질
+    홍보 방식
+    > 다른 강점?
+
+    4. 우리 기업의 보완점을 골라주세요.
+    해당 기업만의 뚜렷한 가치관이 없음
+    가격이 비싼 편임
+    소비자와의 소통이 부족함
+    홍보 수단이 부족함
+    > 다른 보완점?
+
+    5.다음은 판매량이 높은 3개의 제품입니다.
+    우리 기업의 메인 제품은 무엇이라고 생각하시나요?
+
+    6. 우리 기업을 설명할 수 있는 해시태그는 무엇인가요?
+    #친환경적인 #혁신적인 #깔끔한_디자인 #감각적인 #저렴한_가격 #비건_제품
+
+    7. 우리 기업에게 전달하고 싶은 말이 있다면 자유롭게 작성해주세요.
+
+    객관식 : 퍼센트 바와 선택지 같이 제공. 기타로 적은 부분은 스크롤로 해결할 예정
+    주관식 : 스크롤로 해결할 예정
+ -->
+ <div id="chart">
+    <h1>우리 기업 설문 조사 통계</h1>
+    <div class="question">
+        <div class="chartDetail">
+                <span>1. 우리 기업을 구독한 이유</span>
+                <div id="chart-1">{{ output|safe }}</div>
+                <span style="font-size: 22px;">그 외 응답들</span>
+                <div class="others">
+                    <span class="answer">그냥요..</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>
+                </div>
+        </div>
+        <div class="chartDetail">
+                <span>2. 우리 기업의 첫 이미지를 작성해주세요.</span>
+                <div class="others">
+                    <span class="answer">그냥요..</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>
+                </div>
+        </div>
+        <div class="chartDetail">
+                <span>3. 우리 기업의 강점을 골라주세요.</span>
+                <div id="chart-2">{{ output2|safe }}</div>
+                <span style="font-size: 22px;">그 외 응답들</span>
+                <div class="others">
+                    <span class="answer">그냥요..</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..2</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>    
+                    <span class="answer">그냥요..24</span>
+                </div>
+        </div>
+    </div>
+ </div>
+{% endblock %}
