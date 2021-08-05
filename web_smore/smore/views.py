@@ -433,8 +433,8 @@ def main_chart(request):
       data["label"] = key
       data["value"] = value
       dataSource["data"].append(data)
-  column2D = FusionCharts("column2d", "ex1" , "650", "350", "chart-1", "json", dataSource)
-  chartObj = FusionCharts( 'line', 'ex2', '700', '350', 'chart-2', 'json', """{
+  column2D = FusionCharts("column2d", "ex1" , "350", "200", "chart-1", "json", dataSource)
+  chartObj = FusionCharts( 'line', 'ex2', '350', '200', 'chart-2', 'json', """{
   "chart": {
     "caption": "최근 10년간 매출 추이",
     "yaxisname": "만원",
@@ -491,7 +491,7 @@ def main_chart(request):
     }
   ]
 }""")
-  chartObj2 = FusionCharts( 'doughnut2d', 'ex3', '650', '350', 'chart-3', 'json', """{
+  chartObj2 = FusionCharts( 'doughnut2d', 'ex3', '300', '200', 'chart-3', 'json', """{
     "chart": {
       "caption": "구매율이 높은 해시태그",
       "subcaption": "2021년 구매율",
@@ -527,7 +527,7 @@ def main_chart(request):
       }
     ]
   }""")
-  chartObj3 = FusionCharts( 'bar2d', 'ex4', '700', '350', 'chart-4', 'json', """{
+  chartObj3 = FusionCharts( 'bar2d', 'ex4', '350', '250', 'chart-4', 'json', """{
     "chart": {
       "caption": "우리 회사 별점",
       "yaxisname": "평가한 사용자 수",

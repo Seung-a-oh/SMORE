@@ -32,25 +32,32 @@
       });
 </script>
 <div id="chart">
+  <div id="orderanddeliver">
+    safafaf
+  </div>
 	<div class="chartBoxCol">
-        <span>우리 기업의 매출 현황</span>
+    <span>우리 기업의 매출 현황</span>
 		<button id="lastYear" class="chartButton">최근 10년 매출보기</button>
 		<div class="chartDetail">
 			<div id="chart-1">{{ output|safe }}</div>
 			<div id="chart-2"style="display: none;">{{ output2|safe }}</div>
 		</div>
-        <span>구매율이 높은 해시태그</span>
-        <div class="chartDetail">
-            <div id="chart-3">{{ output3|safe }}</div>
-        </div>
+    <span>구매율이 높은 해시태그</span>
+    <div class="chartDetail">
+      <div id="chart-3">{{ output3|safe }}</div>
+    </div>
 	</div>
 
-    <div class="chartBox">
-        <span>우리 회사 별점</span>
-        <div class="chartDetail">
-            <div id="chart-4">{{ output4|safe }}</div>
-        </div>
+  <div class="chartBoxCol">
+    <span>우리 회사 별점</span>
+    <div class="chartDetail">
+        <div id="chart-4">{{ output4|safe }}</div>
     </div>
+    <span>회사 한 줄 평</span>
+    <div class="chartDetail">
+        <!-- 별점과 댓글 기능 같이 구현 (약간 사람인 처럼) 라디오버튼 으로 구현 -->
+    </div>
+  </div>
 
 </div>
 {% endblock %}
