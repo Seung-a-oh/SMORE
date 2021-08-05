@@ -7,18 +7,22 @@
 {% endblock %}
 
 {% block content %}
-<div class="chart" id="chart">
-	<div class="chartBox" >
+
+<div style="display: flex; padding-top: 60%">
+    <div class="chart-box" style="width:600px; height: 700px; background-color:white">
+        <p>상품리스트</p>
+        
+    </div>
+   <div class="chart" style="display: flex; width:650px; flex-wrap:wrap;">
+       <div class="chart-box" style="width: 300px; height: 300px; padding-left:20px">
         <div id="chart-container"></div>
-	</div>
-    <div class="chartBox" >
+       </div>
+       <div class="chart-box" style="width: 300px; height: 300px;padding-left:30px ">
         <div id="chart-container_01"></div>
-    </div>
-    <div class="chartBox">
-        <div class="charDetail">
-            <h3>{{ chartTitle|safe }}</h3>
-            <div id="chart-1">{{ output|safe }}</div>
-        </div>
-    </div>
-</div>
+       </div>
+       <div class="chart-box" style="padding-left: 20px;">
+        <h3>{{ chartTitle|safe }}</h3>
+        <div id="chart-1">{{ output|safe }}</div>
+       </div>
+   </div> 
 {% endblock %}

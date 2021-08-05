@@ -1,24 +1,4 @@
 *{
-    margin: 0;
     padding: 0;
-}
-
-body{
-    background: #E4E9F7;
-}
-
-#chart{
-    padding-top: 53%;
-    width: 110%; height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 55%;
-}
-
-.chartBox {
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding-left: 3%;
-    padding-top: 3%;
+    margin: 0;
 }
