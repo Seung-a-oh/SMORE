@@ -559,3 +559,69 @@ def main_chart(request):
     ]
   }""")
   return render(request, 'main_chart.html', {'output' : column2D.render(), 'output2': chartObj.render(), 'output3': chartObj2.render(),'output4': chartObj3.render()})
+
+def research_chart(request):
+    chartObj = FusionCharts( 'bar2d', 'ex1', '700', '350', 'chart-1', 'json', """{
+    "chart": {
+      "caption": "우리 기업을 구독한 이유",
+      "yaxisname": "응답 비율",
+      "aligncaptionwithcanvas": "0",
+      "plottooltext": "<b>$dataValue</b> %",
+      "theme": "fusion"
+    },
+    "data": [
+      {
+        "label": "제품을 사용해본 경험이 있어서",
+        "value": (31/100)*100
+      },
+      {
+        "label": "가치관에 맞는 스타트업이라서",
+        "value": "12"
+      },
+      {
+        "label": "디자인이 마음에 들어서",
+        "value": "41"
+      },
+      {
+        "label": "SNS 홍보를 통해서",
+        "value": "31"
+      },
+      {
+        "label": "그 외",
+        "value": "31"
+      }
+    ]
+  }""")
+    chartObj2 = FusionCharts( 'bar2d', 'ex2', '700', '350', 'chart-2', 'json', """{
+    "chart": {
+      "caption": "우리 기업의 강점",
+      "yaxisname": "응답 비율",
+      "aligncaptionwithcanvas": "0",
+      "plottooltext": "<b>$dataValue</b> %",
+      "theme": "fusion"
+    },
+    "data": [
+      {
+        "label": "기업의 가치관(친환경)",
+        "value": (31/100)*100
+      },
+      {
+        "label": "제품 디자인",
+        "value": "12"
+      },
+      {
+        "label": "제품 품질",
+        "value": "41"
+      },
+      {
+        "label": "홍보 방식",
+        "value": "31"
+      },
+      {
+        "label": "그 외",
+        "value": "31"
+      }
+    ]
+  }""")
+    return render(request, 'research_chart.html',{'output' : chartObj.render(),'output2' : chartObj2.render()})
+
