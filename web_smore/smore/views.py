@@ -127,45 +127,45 @@ def com_chart(request):
     chartConfig["caption"] = "[2021] 기업 매출 현황"
     chartConfig["subCaption"] = "2021년도 매출"
     chartConfig["xAxisName"] = "월별"
-    chartConfig["yAxisName"] = "상품 판매 개수"
-    chartConfig["numberSuffix"] = "개"
+    chartConfig["yAxisName"] = "상품 판매액"
+    chartConfig["numberSuffix"] = "만원"
     chartConfig["theme"] = "fusion"
     chartConfig2 = OrderedDict()
     chartConfig2["caption"] = "[2020] 기업 매출 현황"
     chartConfig2["subCaption"] = "2020년도 매출"
     chartConfig2["xAxisName"] = "월별"
-    chartConfig2["yAxisName"] = "상품 판매 개수"
-    chartConfig2["numberSuffix"] = "개"
+    chartConfig2["yAxisName"] = "상품 판매액"
+    chartConfig2["numberSuffix"] = "만원"
     chartConfig2["theme"] = "fusion"
 
     # The `chartData` dict contains key-value pairs data
     chartData = OrderedDict()
-    chartData["1월"] = 120
-    chartData["2월"] = 90
-    chartData["3월"] = 129
-    chartData["4월"] = 134
-    chartData["5월"] = 157
-    chartData["6월"] = 93
-    chartData["7월"] = 113
-    chartData["8월"] = 153
-    chartData["9월"] = 135
-    chartData["10월"] = 89
-    chartData["11월"] = 142
-    chartData["12월"] = 133
+    chartData["1월"] = 1205
+    chartData["2월"] = 936
+    chartData["3월"] = 1249
+    chartData["4월"] = 1347
+    chartData["5월"] = 1572
+    chartData["6월"] = 932
+    chartData["7월"] = 1134
+    chartData["8월"] = 1536
+    chartData["9월"] = 1357
+    chartData["10월"] = 898
+    chartData["11월"] = 1428
+    chartData["12월"] = 1333
 
     chartData2 = OrderedDict()
-    chartData2["1월"] = 150
-    chartData2["2월"] = 149
-    chartData2["3월"] = 155
-    chartData2["4월"] = 89
-    chartData2["5월"] = 147
-    chartData2["6월"] = 192
-    chartData2["7월"] = 184
-    chartData2["8월"] = 92
-    chartData2["9월"] = 115
-    chartData2["10월"] = 123
-    chartData2["11월"] = 148
-    chartData2["12월"] = 129
+    chartData2["1월"] = 1506
+    chartData2["2월"] = 1496
+    chartData2["3월"] = 1557
+    chartData2["4월"] = 898
+    chartData2["5월"] = 1472
+    chartData2["6월"] = 1921
+    chartData2["7월"] = 1884
+    chartData2["8월"] = 972
+    chartData2["9월"] = 1175
+    chartData2["10월"] = 1423
+    chartData2["11월"] = 1478
+    chartData2["12월"] = 1249
 
     dataSource["chart"] = chartConfig
     dataSource["data"] = []
@@ -409,23 +409,23 @@ def main_chart(request):
   chartConfig["caption"] = "[2021] 기업 매출 현황"
   chartConfig["subCaption"] = "2021년도 매출"
   chartConfig["xAxisName"] = "월별"
-  chartConfig["yAxisName"] = "상품 판매 개수"
-  chartConfig["numberSuffix"] = "개"
+  chartConfig["yAxisName"] = "상품 판매액"
+  chartConfig["numberSuffix"] = "만원"
   chartConfig["theme"] = "fusion"
 
   chartData = OrderedDict()
-  chartData["1월"] = 120
-  chartData["2월"] = 90
-  chartData["3월"] = 129
-  chartData["4월"] = 134
-  chartData["5월"] = 157
-  chartData["6월"] = 93
-  chartData["7월"] = 113
-  chartData["8월"] = 153
-  chartData["9월"] = 135
-  chartData["10월"] = 89
-  chartData["11월"] = 142
-  chartData["12월"] = 133
+  chartData["1월"] = 1620
+  chartData["2월"] = 980
+  chartData["3월"] = 1239
+  chartData["4월"] = 1634
+  chartData["5월"] = 1957
+  chartData["6월"] = 932
+  chartData["7월"] = 1153
+  chartData["8월"] = 1573
+  chartData["9월"] = 0
+  chartData["10월"] = 0
+  chartData["11월"] = 0
+  chartData["12월"] = 0
   dataSource["chart"] = chartConfig
   dataSource["data"] = []
 
@@ -528,37 +528,91 @@ def main_chart(request):
       }
     ]
   }""")
-  chartObj3 = FusionCharts( 'bar2d', 'ex4', '600', '400', 'chart-4', 'json', """{
-    "chart": {
-      "caption": "우리 회사 별점",
-      "yaxisname": "평가한 사용자 수",
-      "aligncaptionwithcanvas": "0",
-      "plottooltext": "<b>$dataValue</b>명은 우리 회사를 <b>$label</b>점으로 평가함",
-      "theme": "fusion"
+  
+  chartObj3 = FusionCharts( 'msline', 'ex4', '600', '400', 'chart-4', 'json', """{
+  "chart": {
+    "caption": "구독자 증가 수 및 방문자 수",
+    "yaxisname": "명",
+    "subcaption": "08.01 ~ 08.06",
+    "showhovereffect": "1",
+    "numbersuffix": "명",
+    "drawcrossline": "1",
+    "plottooltext": "$seriesName : <b>$dataValue</b>",
+    "theme": "fusion"
+  },
+  "categories": [
+    {
+      "category": [
+        {
+          "label": "08.01"
+        },
+        {
+          "label": "08.02"
+        },
+        {
+          "label": "08.03"
+        },
+        {
+          "label": "08.04"
+        },
+        {
+          "label": "08.05"
+        },
+        {
+          "label": "08.06"
+        }
+      ]
+    }
+  ],
+  "dataset": [
+    {
+      "seriesname": "구독자 증가 수",
+      "data": [
+        {
+          "value": "12"
+        },
+        {
+          "value": "24"
+        },
+        {
+          "value": "16"
+        },
+        {
+          "value": "14"
+        },
+        {
+          "value": "20"
+        },
+        {
+          "value": "17"
+        }
+      ]
     },
-    "data": [
-      {
-        "label": "5",
-        "value": "4311"
-      },
-      {
-        "label": "4",
-        "value": "3149"
-      },
-      {
-        "label": "3",
-        "value": "138"
-      },
-      {
-        "label": "2",
-        "value": "32"
-      },
-      {
-        "label": "1",
-        "value": "6"
-      }
-    ]
-  }""")
+    {
+      "seriesname": "방문자 수",
+      "data": [
+        {
+          "value": "160"
+        },
+        {
+          "value": "128"
+        },
+        {
+          "value": "134"
+        },
+        {
+          "value": "142"
+        },
+        {
+          "value": "154"
+        },
+        {
+          "value": "111"
+        }
+      ]
+    }
+  ]
+}""")
   return render(request, 'main_chart.html', {'output' : column2D.render(), 'output2': chartObj.render(), 'output3': chartObj2.render(),'output4': chartObj3.render()})
 
 def research_chart(request):

@@ -13,7 +13,7 @@
     margin-top: 20px;
     overflow: scroll;
     overflow-x: hidden;
-    background-color: #d1dbf7;
+    background-color: white;
     border-radius: 8px;
 }
 .question::-webkit-scrollbar {
