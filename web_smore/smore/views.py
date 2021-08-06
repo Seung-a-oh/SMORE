@@ -437,9 +437,9 @@ def main_chart(request):
   column2D = FusionCharts("column2d", "ex1" , "600", "400", "chart-1", "json", dataSource)
   chartObj = FusionCharts( 'line', 'ex2', '600', '400', 'chart-2', 'json', """{
   "chart": {
-    "caption": "최근 10년간 매출 추이",
+    "caption": "최근 10일간 매출 추이",
     "yaxisname": "만원",
-    "subcaption": "[2011-2021]",
+    "subcaption": "07.27 ~ 08.06",
     "numbersuffix": " 만원",
     "rotatelabels": "1",
     "setadaptiveymin": "1",
@@ -447,47 +447,47 @@ def main_chart(request):
   },
   "data": [
     {
-      "label": "2011",
+      "label": "07.27",
       "value": "12229"
     },
     {
-      "label": "2012",
+      "label": "07.28",
       "value": "8249"
     },
     {
-      "label": "2013",
+      "label": "07.29",
       "value": "9245"
     },
     {
-      "label": "2014",
+      "label": "07.30",
       "value": "15584"
     },
     {
-      "label": "2015",
+      "label": "07.31",
       "value": "18529"
     },
     {
-      "label": "2016",
+      "label": "08.01",
       "value": "14289"
     },
     {
-      "label": "2017",
+      "label": "08.02",
       "value": "19562"
     },
     {
-      "label": "2018",
+      "label": "08.03",
       "value": "16240"
     },
     {
-      "label": "2019",
+      "label": "08.04",
       "value": "24153"
     },
     {
-      "label": "2020",
+      "label": "08.05",
       "value": "24091"
     },
     {
-      "label": "2021",
+      "label": "08.06",
       "value": "31032"
     }
   ]
@@ -624,5 +624,103 @@ def research_chart(request):
       }
     ]
   }""")
-    return render(request, 'research_chart.html',{'output' : chartObj.render(),'output2' : chartObj2.render()})
-
+    chartObj3 = FusionCharts( 'bar2d', 'ex3', '700', '350', 'chart-3', 'json', """{
+    "chart": {
+      "caption": "우리 기업의 보완점",
+      "yaxisname": "응답 비율",
+      "aligncaptionwithcanvas": "0",
+      "plottooltext": "<b>$dataValue</b> %",
+      "theme": "fusion"
+    },
+    "data": [
+      {
+        "label": "해당 기업만의 뚜렷한 가치관이 없음",
+        "value": (31/100)*100
+      },
+      {
+        "label": "가격이 비싼 편임",
+        "value": "12"
+      },
+      {
+        "label": "소비자와의 소통이 부족함",
+        "value": "41"
+      },
+      {
+        "label": "홍보 수단이 부족함",
+        "value": "31"
+      },
+      {
+        "label": "그 외",
+        "value": "31"
+      }
+    ]
+  }""")
+    chartObj4 = FusionCharts( 'doughnut2d', 'ex4', '600', '400', 'chart-4', 'json', """{
+    "chart": {
+      "caption": "3개의 제품 중 대표 제품",
+      "subcaption": "중복 선택",
+      "showpercentvalues": "1",
+      "defaultcenterlabel": "구매자 통계",
+      "aligncaptionwithcanvas": "0",
+      "captionpadding": "0",
+      "decimals": "1",
+      "plottooltext": "고객의 <b>$percentValue</b>는 대표 상품을 <b>$label</b> 이라고 생각합니다.",
+      "centerlabel": "<b>$label</b>: $value",
+      "theme": "fusion"
+    },
+    "data": [
+      {
+        "label": "1번 상품",
+        "value": "10400"
+      },
+      {
+        "label": "2번 상품",
+        "value": "5300"
+      },
+      {
+        "label": "3번 상품",
+        "value": "10500"
+      }
+    ]
+  }""")
+    chartObj5 = FusionCharts( 'doughnut2d', 'ex5', '600', '400', 'chart-5', 'json', """{
+    "chart": {
+      "caption": "우리 기업을 설명할 수 있는 해시태그",
+      "subcaption": "중복 선택",
+      "showpercentvalues": "1",
+      "defaultcenterlabel": "구매자 통계",
+      "aligncaptionwithcanvas": "0",
+      "captionpadding": "0",
+      "decimals": "1",
+      "plottooltext": "고객의 <b>$percentValue</b>는 대표 해시태그를 <b>$label</b> 이라고 생각합니다.",
+      "centerlabel": "<b>$label</b>: $value",
+      "theme": "fusion"
+    },
+    "data": [
+      {
+        "label": "#친환경적인",
+        "value": "10400"
+      },
+      {
+        "label": "#혁신적인",
+        "value": "5300"
+      },
+      {
+        "label": "#깔끔한_디자인",
+        "value": "10500"
+      },
+      {
+        "label": "#감각적인",
+        "value": "10500"
+      },
+      {
+        "label": "#저렴한_가격",
+        "value": "10500"
+      },
+      {
+        "label": "#비건_제품",
+        "value": "10500"
+      }
+    ]
+  }""")
+    return render(request, 'research_chart.html',{'output' : chartObj.render(),'output2' : chartObj2.render(),'output3' : chartObj3.render(),'output4' : chartObj4.render(),'output5' : chartObj5.render()})
