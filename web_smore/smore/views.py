@@ -360,6 +360,7 @@ def com_chart(request):
     return  render(request, 'com_chart.html', {'output' : column2D.render(), 'output2':column2D2.render(), 'output3': chartObj.render(), 'output4': chartObj2.render(),'output5': chartObj3.render(),'output6': chartObj4.render(),'chartTitle': '기업 매출 그래프', 'chartTitle2': '기업 매출 그래프2'})
 
 def product_chart(request):
+
   # Chart data is passed to the `dataSource` parameter, as dictionary in the form of key-value pairs.
    dataSource = OrderedDict() 
    # The `chartConfig` dict contains key-value pairs data for chart attribute
@@ -398,7 +399,7 @@ def product_chart(request):
    # Create an object for the column 2D chart using the FusionCharts class constructor
    # The chart data is passed to the `dataSource` parameter.
 
-   column2D = FusionCharts("column2d", "ex1" , "620", "350", "chart-1", "json", dataSource) 
+   column2D = FusionCharts("column2d", "ex1" , "610", "340", "chart-1", "json", dataSource) 
    return  render(request, 'product_chart.html', {'output' : column2D.render(), 'chartTitle': ''}) 
    
 def main_chart(request):
