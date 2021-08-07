@@ -115,9 +115,6 @@ def exper_delete(request, id):
     delete_exper.delete()
     return redirect('experience')
 
-def dashboard(request):
-    return render(request, 'dashboard.html')
-
 def com_chart(request):
     dataSource = OrderedDict()
     dataSource2 = OrderedDict()
@@ -130,6 +127,7 @@ def com_chart(request):
     chartConfig["yAxisName"] = "상품 판매액"
     chartConfig["numberSuffix"] = "만원"
     chartConfig["theme"] = "fusion"
+    chartConfig["palettecolors"] = "e4dbb2"
     chartConfig2 = OrderedDict()
     chartConfig2["caption"] = "[2020] 기업 매출 현황"
     chartConfig2["subCaption"] = "2020년도 매출"
@@ -137,6 +135,7 @@ def com_chart(request):
     chartConfig2["yAxisName"] = "상품 판매액"
     chartConfig2["numberSuffix"] = "만원"
     chartConfig2["theme"] = "fusion"
+    chartConfig2["palettecolors"] = "e4dbb2"
 
     # The `chartData` dict contains key-value pairs data
     chartData = OrderedDict()
@@ -194,13 +193,14 @@ def com_chart(request):
 
     # Create an object for the column 2D chart using the FusionCharts class constructor
     # The chart data is passed to the `dataSource` parameter.
-    column2D = FusionCharts("column2d", "ex1" , "650", "350", "chart-1", "json", dataSource)
-    column2D2 = FusionCharts("column2d", "ex2" , "650", "350", "chart-3", "json", dataSource2)
+    column2D = FusionCharts("column2d", "ex1"  , "650", "340", "chart-1", "json", dataSource)
+    column2D2 = FusionCharts("column2d", "ex2"  , "650", "340", "chart-3", "json", dataSource2)
 
-    chartObj = FusionCharts( 'bar2d', 'ex3', '700', '350', 'chart-4', 'json', """{
+    chartObj = FusionCharts( 'bar2d', 'ex3', '650', '340', 'chart-4', 'json', """{
   "chart": {
     "caption": "상품 판매 순위",
     "yaxisname": "판매 개수",
+    "paletteColors": "#e4dbb2,#cfc183",
     "aligncaptionwithcanvas": "0",
     "plottooltext": "<b>$label</b> 은 <b>$dataValue</b> 개 판매됨",
     "theme": "fusion"
@@ -266,6 +266,7 @@ def com_chart(request):
     "subcaption": "2021년 구매자 통계",
     "showpercentvalues": "1",
     "defaultcenterlabel": "연령대 통계  ",
+    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
     "aligncaptionwithcanvas": "0",
     "captionpadding": "0",
     "decimals": "1",
@@ -276,7 +277,7 @@ def com_chart(request):
   "data": [
     {
       "label": "20대 여자",
-      "value": "10000"
+      "value": "10000",
     },
     {
       "label": "20대 남자",
@@ -301,6 +302,7 @@ def com_chart(request):
     "caption": "구매자 성별",
     "subcaption": "2021년 구매자 통계",
     "showpercentvalues": "1",
+    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
     "defaultcenterlabel": "성별",
     "aligncaptionwithcanvas": "0",
     "captionpadding": "0",
@@ -311,19 +313,20 @@ def com_chart(request):
   },
   "data": [
     {
-      "label": "남성",
+      "label": "여성",
       "value": "2100"
     },
     {
-      "label": "여성",
+      "label": "남성",
       "value": "3200"
     }
   ]
 }""")
-    chartObj4 = FusionCharts( 'line', 'ex7', '700', '350', 'chart-7', 'json', """{
+    chartObj4 = FusionCharts( 'line', 'ex7', '650', '350', 'chart-7', 'json', """{
   "chart": {
     "caption": "구독자 수",
     "yaxisname": "명",
+    "paletteColors": "#cfc183",
     "subcaption": "[2016-2021]",
     "numbersuffix": " 명",
     "rotatelabels": "1",
@@ -371,6 +374,7 @@ def product_chart(request):
    chartConfig["yAxisName"] = "상품 매출(만원)"
    chartConfig["numberSuffix"] = ""
    chartConfig["theme"] = "fusion"  
+   chartConfig["palettecolors"] = "e4dbb2"
    # The `chartData` dict contains key-value pairs data
    chartData = OrderedDict()
    chartData["Jan"] = 290
@@ -399,8 +403,139 @@ def product_chart(request):
    # Create an object for the column 2D chart using the FusionCharts class constructor
    # The chart data is passed to the `dataSource` parameter.
 
-   column2D = FusionCharts("column2d", "ex1" , "610", "340", "chart-1", "json", dataSource) 
-   return  render(request, 'product_chart.html', {'output' : column2D.render(), 'chartTitle': ''}) 
+   column2D = FusionCharts("column2d", "ex1"  , "610", "340", "chart-1", "json", dataSource)
+  # Chart data is passed to the `dataSource` parameter, as dictionary in the form of key-value pairs.
+   dataSource = OrderedDict() 
+   # The `chartConfig` dict contains key-value pairs data for chart attribute
+   chartConfig = OrderedDict()
+   chartConfig["caption"] = "월별 매출 현황"
+   chartConfig["subCaption"] = ""
+   chartConfig["xAxisName"] = "month"
+   chartConfig["yAxisName"] = "상품 매출(만원)"
+   chartConfig["numberSuffix"] = ""
+   chartConfig["theme"] = "fusion"  
+  #  chartConfig["bgcolor"] = "263812"  
+   chartConfig["palettecolors"] = "d6c98d"
+   # The `chartData` dict contains key-value pairs data
+   chartData = OrderedDict()
+   chartData["Jan"] = 320
+   chartData["Feb"] = 270
+   chartData["Mar"] = 120
+   chartData["Apr"] = 180
+   chartData["May"] = 175
+   chartData["Jun"] = 134
+   chartData["Jul"] = 214
+   chartData["Aug"] = 142
+   chartData["Sep"] = 97
+   chartData["Oct"] = 214
+   chartData["Nov"] = 351
+   chartData["Dec"] = 227  
+   dataSource["chart"] = chartConfig
+   dataSource["data"] = []  
+   # Convert the data in the `chartData` array into a format that can be consumed by FusionCharts.
+   # The data for the chart should be in an array wherein each element of the array is a JSON object
+   # having the `label` and `value` as keys.  
+   # Iterate through the data in `chartData` and insert in to the `dataSource['data']` list.
+   for key, value in chartData.items():
+       data = {}
+       data["label"] = key
+       data["value"] = value
+       dataSource["data"].append(data)  
+   # Create an object for the column 2D chart using the FusionCharts class constructor
+   # The chart data is passed to the `dataSource` parameter.
+
+   column2D2 = FusionCharts("column2d", "ex6"  , "610", "340", "chart-6", "json", dataSource) 
+   chartObj = FusionCharts( 'pie2d', 'ex2', '300', '300', 'chart-2', 'json', """{
+  "chart": {
+    "caption": "구매자 남녀성비",
+    "plottooltext": "$label, <b>$percentValue</b> ",
+    "numberPrefix": "",
+    "showPercentInTooltip": "0",
+    "decimals": "1",
+    "useDataPlotColorForLabels": "1",
+    "theme": "fusion",
+  },
+"data": [{
+    "label": "여자",
+    "value": "60"
+}, {
+    "label": "남자",
+    "value": "40"
+}]
+}""")
+   chartObj2 = FusionCharts( 'pie2d', 'ex3', '300', '300', 'chart-3', 'json', """{
+  "chart": {
+    "caption": "구매자 남녀성비",
+    "plottooltext": "$label, <b>$percentValue</b> ",
+    "numberPrefix": "",
+    "showPercentInTooltip": "0",
+    "decimals": "1",
+    "useDataPlotColorForLabels": "1",
+    "theme": "fusion",
+  },
+"data": [{
+    "label": "여자",
+    "value": "80"
+}, {
+    "label": "남자",
+    "value": "20"
+}]
+}""")
+   chartObj3 = FusionCharts( 'pie2d', 'ex4', '300', '300', 'chart-4', 'json', """{
+  "chart": {
+    "caption": "구매자 연령대",
+    "plottooltext": "$label, <b>$percentValue</b> ",
+    "numberPrefix": "",
+    "showPercentInTooltip": "0",
+    "decimals": "1",
+    "useDataPlotColorForLabels": "1",
+    "theme": "fusion"
+  },
+"data": [{
+    "label": "10대",
+    "value": "30"
+}, {
+    "label": "20대",
+    "value": "40"
+}, {
+    "label": "30대",
+    "value": "20"
+}, {
+    "label": "40대",
+    "value": "7"
+},{
+    "label": "50대이상",
+    "value": "3"
+}]
+}""")
+   chartObj4 = FusionCharts( 'pie2d', 'ex5', '300', '300', 'chart-5', 'json', """{
+  "chart": {
+    "caption": "구매자 연령대",
+    "plottooltext": "$label, <b>$percentValue</b> ",
+    "numberPrefix": "",
+    "showPercentInTooltip": "0",
+    "decimals": "1",
+    "useDataPlotColorForLabels": "1",
+    "theme": "fusion"
+  },
+"data": [{
+    "label": "10대",
+    "value": "20"
+}, {
+    "label": "20대",
+    "value": "35"
+}, {
+    "label": "30대",
+    "value": "20"
+}, {
+    "label": "40대",
+    "value": "17"
+},{
+    "label": "50대이상",
+    "value": "8"
+}]
+}""")
+   return  render(request, 'product_chart.html', {'output' : column2D.render(),'output2' :  chartObj.render(),'output3' :  chartObj2.render(),'output4' :  chartObj3.render(),'output5' :  chartObj4.render(),'output6' : column2D2.render(),}) 
    
 def main_chart(request):
   dataSource = OrderedDict()
@@ -412,6 +547,7 @@ def main_chart(request):
   chartConfig["yAxisName"] = "상품 판매액"
   chartConfig["numberSuffix"] = "만원"
   chartConfig["theme"] = "fusion"
+  chartConfig["palettecolors"] = "e4dbb2"
 
   chartData = OrderedDict()
   chartData["1월"] = 1620
@@ -434,13 +570,14 @@ def main_chart(request):
       data["label"] = key
       data["value"] = value
       dataSource["data"].append(data)
-  column2D = FusionCharts("column2d", "ex1" , "600", "400", "chart-1", "json", dataSource)
-  chartObj = FusionCharts( 'line', 'ex2', '600', '400', 'chart-2', 'json', """{
+  column2D = FusionCharts("column2d", "ex1" , "650", "340", "chart-1", "json", dataSource)
+  chartObj = FusionCharts( 'line', 'ex2', '650', '340', 'chart-2', 'json', """{
   "chart": {
     "caption": "최근 10일간 매출 추이",
     "yaxisname": "만원",
     "subcaption": "07.27 ~ 08.06",
     "numbersuffix": " 만원",
+    "paletteColors": "#cfc183,#cca356",
     "rotatelabels": "1",
     "setadaptiveymin": "1",
     "theme": "fusion"
@@ -529,13 +666,14 @@ def main_chart(request):
     ]
   }""")
   
-  chartObj3 = FusionCharts( 'msline', 'ex4', '600', '400', 'chart-4', 'json', """{
+  chartObj3 = FusionCharts( 'msline', 'ex4', '650', '340', 'chart-4', 'json', """{
   "chart": {
     "caption": "구독자 증가 수 및 방문자 수",
     "yaxisname": "명",
     "subcaption": "08.01 ~ 08.06",
     "showhovereffect": "1",
     "numbersuffix": "명",
+    "paletteColors": "#cfc183,#cca356",
     "drawcrossline": "1",
     "plottooltext": "$seriesName : <b>$dataValue</b>",
     "theme": "fusion"
@@ -616,7 +754,7 @@ def main_chart(request):
   return render(request, 'main_chart.html', {'output' : column2D.render(), 'output2': chartObj.render(), 'output3': chartObj2.render(),'output4': chartObj3.render()})
 
 def research_chart(request):
-    chartObj = FusionCharts( 'bar2d', 'ex1', '700', '350', 'chart-1', 'json', """{
+    chartObj = FusionCharts( 'bar2d', 'ex1','610', '340', 'chart-1', 'json', """{
     "chart": {
       "caption": "우리 기업을 구독한 이유",
       "yaxisname": "응답 비율",
@@ -647,7 +785,7 @@ def research_chart(request):
       }
     ]
   }""")
-    chartObj2 = FusionCharts( 'bar2d', 'ex2', '700', '350', 'chart-2', 'json', """{
+    chartObj2 = FusionCharts( 'bar2d', 'ex2', '610', '340', 'chart-2', 'json', """{
     "chart": {
       "caption": "우리 기업의 강점",
       "yaxisname": "응답 비율",
@@ -678,7 +816,7 @@ def research_chart(request):
       }
     ]
   }""")
-    chartObj3 = FusionCharts( 'bar2d', 'ex3', '700', '350', 'chart-3', 'json', """{
+    chartObj3 = FusionCharts( 'bar2d', 'ex3',  '610', '340', 'chart-3', 'json', """{
     "chart": {
       "caption": "우리 기업의 보완점",
       "yaxisname": "응답 비율",
