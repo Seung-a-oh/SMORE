@@ -21,6 +21,37 @@ Wiki
 Security
 Insights
 Settings
+SMORE/app_smore/SMORE/.gitignore
+@Seung-a-oh
+Seung-a-oh [승아] - git ignore
+Latest commit a972216 1 hour ago
+ History
+ 1 contributor
+315 lines (250 sloc)  4.57 KB
+  
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@Seung-a-oh 
+Seung-a-oh
+/
+SMORE
+forked from K-HACKATHON-smore/SMORE
+0
+1
+4
+Code
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
 SMORE/Seung-A/.gitignore
 @Seung-a-oh
 Seung-a-oh [승아] - gitignore
@@ -300,6 +331,19 @@ fabric.properties
 ### AndroidStudio Patch ###
 
 !/gradle/wrapper/gradle-wrapper.jar
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
 © 2021 GitHub, Inc.
 Terms
 Privacy
