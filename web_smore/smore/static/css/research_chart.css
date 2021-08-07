@@ -23,7 +23,7 @@ body{
     width: 7px;
 }
 .question::-webkit-scrollbar-thumb{
-    background-color: #7495f0;
+    background-color: rgb(240, 240, 240);
 }
 .question::-webkit-scrollbar-track{
     background-color: white;
@@ -72,7 +72,7 @@ body{
     width: 7px;
 }
 .others::-webkit-scrollbar-thumb{
-    background-color: #7495f0;
+    background-color: rgb(240, 240, 240);
 }
 .others::-webkit-scrollbar-track{
     background-color: white;
@@ -82,11 +82,4 @@ body{
 }
 .chartImg {
     margin: 10px 0px;
-}
-hr {
-    background: red;
-    height: 20px;
-    border: 0px;
-    width: 100%;
-    margin: 0px;
 }
