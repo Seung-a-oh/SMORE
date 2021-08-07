@@ -1,3 +1,6 @@
+body{
+  background-color: rgb(245, 245, 245);
+}
 #chart {
     width: 1700px; height: 100%;
     display: flex;
@@ -13,8 +16,8 @@
     margin-top: 20px;
     overflow: scroll;
     overflow-x: hidden;
-    background-color: white;
     border-radius: 8px;
+
 }
 .question::-webkit-scrollbar {
     width: 7px;
@@ -32,6 +35,8 @@
     flex-direction: column;
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
+    padding-bottom: 2%;
 }
 .chartDetail:nth-child(2) {
     width: 70%; height: 400px;
