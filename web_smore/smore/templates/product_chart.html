@@ -7,30 +7,6 @@
 {% endblock %}
 
 {% block content %}
-<script>
-	$(document).ready( function() {
-        $('.first').click( function() {
-          $('#chart-1').toggle( 'slow' );
-          $('#chart-2').toggle( 'slow' );
-          $('#chart-3').toggle( 'slow' );
-          $('#chart-4').toggle( 'slow' );
-          $('#chart-5').toggle( 'slow' );
-          $('#chart-6').toggle( 'slow' );
-          $('.second').removeClass('changeBc');
-          $('.first').addClass('changeBc');
-        });
-        $('.second').click( function() {
-            $('#chart-1').toggle( 'slow' );
-            $('#chart-2').toggle( 'slow' );
-            $('#chart-3').toggle( 'slow' );
-            $('#chart-4').toggle( 'slow' );
-            $('#chart-5').toggle( 'slow' );
-            $('#chart-6').toggle( 'slow' );
-            $('.first').removeClass('changeBc');
-            $('.second').addClass('changeBc');
-        });
-      });
-</script>
 
 <div style="display: flex; text-align:center; justify-content:center; padding-left:5%; padding-top: 53%">
     <div class="chart-box" style="width:600px; height: 650px; background-color:white">
