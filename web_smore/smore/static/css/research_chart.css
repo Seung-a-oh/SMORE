@@ -36,7 +36,8 @@ body{
     display: flex;
     flex-wrap: wrap;
     background-color: white;
-    padding-bottom: 2%;
+    padding : 10px 0px 2% 25px;
+    border-radius: 17px;
 }
 .chartDetail:nth-child(2) {
     width: 70%; height: 400px;
@@ -67,7 +68,6 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    background-color: rgb(231, 229, 229);
 }
 .others::-webkit-scrollbar {
     width: 7px;
@@ -82,5 +82,5 @@ body{
     font-size: medium;
 }
 .chartImg {
-    margin: 10px 0px;
+    margin: 10px 110px;
 }
