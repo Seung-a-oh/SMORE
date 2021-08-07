@@ -130,6 +130,7 @@ def com_chart(request):
     chartConfig["yAxisName"] = "상품 판매액"
     chartConfig["numberSuffix"] = "만원"
     chartConfig["theme"] = "fusion"
+    chartConfig["palettecolors"] = "e4dbb2"
     chartConfig2 = OrderedDict()
     chartConfig2["caption"] = "[2020] 기업 매출 현황"
     chartConfig2["subCaption"] = "2020년도 매출"
@@ -137,7 +138,7 @@ def com_chart(request):
     chartConfig2["yAxisName"] = "상품 판매액"
     chartConfig2["numberSuffix"] = "만원"
     chartConfig2["theme"] = "fusion"
-    chartConfig["palettecolors"] = "e4dbb2"
+    chartConfig2["palettecolors"] = "e4dbb2"
 
     # The `chartData` dict contains key-value pairs data
     chartData = OrderedDict()
@@ -202,6 +203,7 @@ def com_chart(request):
   "chart": {
     "caption": "상품 판매 순위",
     "yaxisname": "판매 개수",
+    "paletteColors": "#e4dbb2,#cfc183",
     "aligncaptionwithcanvas": "0",
     "plottooltext": "<b>$label</b> 은 <b>$dataValue</b> 개 판매됨",
     "theme": "fusion"
@@ -267,6 +269,7 @@ def com_chart(request):
     "subcaption": "2021년 구매자 통계",
     "showpercentvalues": "1",
     "defaultcenterlabel": "연령대 통계  ",
+    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
     "aligncaptionwithcanvas": "0",
     "captionpadding": "0",
     "decimals": "1",
@@ -302,6 +305,7 @@ def com_chart(request):
     "caption": "구매자 성별",
     "subcaption": "2021년 구매자 통계",
     "showpercentvalues": "1",
+    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
     "defaultcenterlabel": "성별",
     "aligncaptionwithcanvas": "0",
     "captionpadding": "0",
@@ -312,11 +316,11 @@ def com_chart(request):
   },
   "data": [
     {
-      "label": "남성",
+      "label": "여성",
       "value": "2100"
     },
     {
-      "label": "여성",
+      "label": "남성",
       "value": "3200"
     }
   ]
@@ -325,6 +329,7 @@ def com_chart(request):
   "chart": {
     "caption": "구독자 수",
     "yaxisname": "명",
+    "paletteColors": "#cfc183",
     "subcaption": "[2016-2021]",
     "numbersuffix": " 명",
     "rotatelabels": "1",
@@ -372,7 +377,7 @@ def product_chart(request):
    chartConfig["yAxisName"] = "상품 매출(만원)"
    chartConfig["numberSuffix"] = ""
    chartConfig["theme"] = "fusion"  
-   chartConfig["palettecolors"] = "e4dbb2"  
+   chartConfig["palettecolors"] = "e4dbb2"
    # The `chartData` dict contains key-value pairs data
    chartData = OrderedDict()
    chartData["Jan"] = 290
@@ -412,8 +417,8 @@ def product_chart(request):
    chartConfig["yAxisName"] = "상품 매출(만원)"
    chartConfig["numberSuffix"] = ""
    chartConfig["theme"] = "fusion"  
-   chartConfig["bgcolor"] = "263812"  
-   chartConfig["palettecolors"] = "FFFFFF"  
+  #  chartConfig["bgcolor"] = "263812"  
+   chartConfig["palettecolors"] = "d6c98d"
    # The `chartData` dict contains key-value pairs data
    chartData = OrderedDict()
    chartData["Jan"] = 320
@@ -451,7 +456,8 @@ def product_chart(request):
     "showPercentInTooltip": "0",
     "decimals": "1",
     "useDataPlotColorForLabels": "1",
-    "theme": "fusion"
+    "theme": "fusion",
+    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
   },
 "data": [{
     "label": "여자",
@@ -469,7 +475,8 @@ def product_chart(request):
     "showPercentInTooltip": "0",
     "decimals": "1",
     "useDataPlotColorForLabels": "1",
-    "theme": "fusion"
+    "theme": "fusion",
+    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
   },
 "data": [{
     "label": "여자",
@@ -483,6 +490,7 @@ def product_chart(request):
   "chart": {
     "caption": "구매자 연령대",
     "plottooltext": "$label, <b>$percentValue</b> ",
+    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
     "numberPrefix": "",
     "showPercentInTooltip": "0",
     "decimals": "1",
@@ -510,11 +518,11 @@ def product_chart(request):
   "chart": {
     "caption": "구매자 연령대",
     "plottooltext": "$label, <b>$percentValue</b> ",
+    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
     "numberPrefix": "",
     "showPercentInTooltip": "0",
     "decimals": "1",
     "useDataPlotColorForLabels": "1",
-    "paletteColors": "#EED17F,#97CBE7,#ff4868,#B0D67A,#894523",
     "theme": "fusion"
   },
 "data": [{
