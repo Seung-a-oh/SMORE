@@ -868,7 +868,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout7"
-            android:layout_width="391dp"
+            android:layout_width="0dp"
             android:layout_height="40dp"
             android:background="#F5F0E4"
             app:layout_constraintEnd_toEndOf="parent"
@@ -998,7 +998,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout9"
-            android:layout_width="391dp"
+            android:layout_width="0dp"
             android:layout_height="40dp"
             android:background="#F5F0E4"
             app:layout_constraintEnd_toEndOf="parent"
