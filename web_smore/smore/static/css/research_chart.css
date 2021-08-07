@@ -66,6 +66,7 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    background-color: rgb(231, 229, 229);
 }
 .others::-webkit-scrollbar {
     width: 7px;
