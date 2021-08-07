@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CoSubMain">
+
+    <LinearLayout
+        android:id="@+id/id_main"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+    <!--
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img2"/> -->
+        <TextView
+            android:layout_width="143dp"
+            android:layout_height="44dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/gmarketmedium"
+            android:text="smore"
+            android:textColor="#292929"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_silde"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.75"
+            android:background="@drawable/background"/>
+
+        <FrameLayout
+            android:id="@+id/view_sildebar"
+            android:layout_width="280dp"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/bar1" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/img1"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/backver" />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="0dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="기업 소식"
+                android:textColor="#777777"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="85dp"
+                android:textAlignment="center"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/gmarketmedium"
+                android:text="제품 목록"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="285dp"
+                android:layout_marginRight="70dp"
+                android:text="구독"
+                android:fontFamily="@font/gmarketmedium"
+                android:textColor="@color/black"
+                android:backgroundTint="#DBCFBA"
+                android:onClick="onClick"
+                android:textSize="15sp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/list2" />
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list3"/>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list4"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list10"/>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list9"/>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list8"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="430dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list1"/>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list7"/>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list14"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="640dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list5"/>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list6"/>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list13"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="850dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list11"/>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list12"/>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="203dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/list15"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+    </LinearLayout>
+    //하단바 생성
+    //위 LinearLayout에 height와 weight 조정함
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/bar"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
