@@ -554,6 +554,7 @@ def main_chart(request):
   chartConfig["yAxisName"] = "상품 판매액"
   chartConfig["numberSuffix"] = "만원"
   chartConfig["theme"] = "fusion"
+  chartConfig["palettecolors"] = "e4dbb2"
 
   chartData = OrderedDict()
   chartData["1월"] = 1620
@@ -583,6 +584,7 @@ def main_chart(request):
     "yaxisname": "만원",
     "subcaption": "07.27 ~ 08.06",
     "numbersuffix": " 만원",
+    "paletteColors": "#cfc183,#cca356",
     "rotatelabels": "1",
     "setadaptiveymin": "1",
     "theme": "fusion"
@@ -678,6 +680,7 @@ def main_chart(request):
     "subcaption": "08.01 ~ 08.06",
     "showhovereffect": "1",
     "numbersuffix": "명",
+    "paletteColors": "#cfc183,#cca356",
     "drawcrossline": "1",
     "plottooltext": "$seriesName : <b>$dataValue</b>",
     "theme": "fusion"
