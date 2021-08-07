@@ -8,7 +8,7 @@
     padding-top: 50%;
 }
 .chartBox {
-    width: 700px; height: 400px;
+    width: 650px; height: 400px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
@@ -23,7 +23,6 @@
     border: #adc2fa 2px solid;
     border-radius: 2px;
     width: 100px; height: 34px;
-    margin-right: 50px;
     margin-bottom: 7px;
 }
 .chartButton:hover {
