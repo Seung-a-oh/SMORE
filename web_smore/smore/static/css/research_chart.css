@@ -66,6 +66,7 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    background-color: rgb(231, 229, 229);
 }
 .others::-webkit-scrollbar {
     width: 7px;
@@ -81,4 +82,11 @@ body{
 }
 .chartImg {
     margin: 10px 0px;
+}
+hr {
+    background: red;
+    height: 20px;
+    border: 0px;
+    width: 100%;
+    margin: 0px;
 }

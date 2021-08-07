@@ -19,3 +19,12 @@
 .displayNone {
     display: none;
 }
+.first {
+    display: flex; align-items :center;
+}
+.second {
+    display: flex; align-items :center;
+}
+.changeBc {
+    background-color: rgb(204, 204, 204);
+}
