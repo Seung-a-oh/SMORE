@@ -7,9 +7,44 @@
 {% endblock %}
 
 {% block content %}
-<div id="chart-container" style="text-align: center; padding-top:145%"></div>
-<div style="padding-top: 3%">
-<h3>{{ chartTitle|safe }}</h3>
-<div id="chart-1"><span style="width: 550px;">{{ output|safe }}</span></div>
+
+<div style="display: flex; text-align:center; justify-content:center; padding-left:5%; padding-top: 55%">
+    <div class="chart-box" style="width:600px; height: 650px; background-color:white">
+            <div style="display: flex; align-items :center;">
+                <img src="{% static 'img/one.png' %}" alt="X" width="150" height="150">
+                <p style="font-size: 15px;">반려견 쿨 매트</p>
+            </div>
+            <hr>
+            <div style="display: flex; align-items :center;">
+                <img src="{% static 'img/two.png' %}" alt="X" width="150" height="150">
+                <p style="font-size: 15px;">반려견 쿨 매트</p>
+            </div>
+            <hr>
+            <div style="display: flex; align-items :center;">
+                <img src="{% static 'img/three.png' %}" alt="X" width="150" height="150">
+                <p style="font-size: 15px;">반려견 쿨 매트</p>
+            </div>
+            <hr>
+            <div style="display: flex; align-items :center;">
+                <img src="{% static 'img/four.png' %}" alt="X" width="150" height="150">
+                <p style="font-size: 15px;">반려견 쿨 매트</p>
+            </div>
+            <hr>
+            <div style="padding-top:1%; text-align:center; justify-content: center;">
+                <p style="font-size:15px;">1 of 1</p>
+            </div>
+    </div>
+   <div class="chart" style="display: flex; width:650px; flex-wrap:wrap;">
+       <div class="chart-box" style="width: 300px; height: 300px; padding-left:20px">
+        <div id="chart-container"></div>
+       </div>
+       <div class="chart-box" style="width: 300px; height: 300px;padding-left:30px ">
+        <div id="chart-container_01"></div>
+       </div>
+       <div class="chart-box" style="padding-left: 20px; padding-top:10px">
+        <h3>{{ chartTitle|safe }}</h3>
+        <div id="chart-1">{{ output|safe }}</div>
+       </div>
+   </div>
 </div>
 {% endblock %}

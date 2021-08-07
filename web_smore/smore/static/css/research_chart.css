@@ -1,0 +1,79 @@
+#chart {
+    width: 1700px; height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50%;
+    justify-content: center;
+}
+.question {
+    width: 1300px; height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: white;
+    border-radius: 8px;
+}
+.question::-webkit-scrollbar {
+    width: 7px;
+}
+.question::-webkit-scrollbar-thumb{
+    background-color: #7495f0;
+}
+.question::-webkit-scrollbar-track{
+    background-color: white;
+}
+.chartDetail {
+    width: 70%; height: 550px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+.chartDetail:nth-child(2) {
+    width: 70%; height: 400px;
+    margin-bottom: 40px;
+}
+.chartDetail:nth-child(7) {
+    width: 70%; height: 400px;
+    margin-bottom: 40px;
+}
+.chartDetail:nth-child(1) {
+    width: 70%; height: 700px;
+    margin-bottom: 40px;
+}
+.chartDetail:nth-child(3) {
+    width: 70%; height: 700px;
+    margin-bottom: 40px;
+}
+.chartDetail:nth-child(4) {
+    width: 70%; height: 700px;
+    margin-bottom: 40px;
+}
+.others {
+    width: 60%;
+    height: 200px;
+    overflow:scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.others::-webkit-scrollbar {
+    width: 7px;
+}
+.others::-webkit-scrollbar-thumb{
+    background-color: #7495f0;
+}
+.others::-webkit-scrollbar-track{
+    background-color: white;
+}
+.answer {
+    font-size: medium;
+}
+.chartImg {
+    margin: 10px 0px;
+}
