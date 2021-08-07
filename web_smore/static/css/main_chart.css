@@ -29,25 +29,28 @@
     margin:20px;
 }
 .chartDetail {
-    width: 100%; height: 100%;
+    width: 650px; height: 100%;
+    background-color: white;
     margin-top: 10px;
 }
+.chart-4 {
+    margin-top: 44px;
+}
 .chartButton {
-    background-color: #d2dcf8;
-    border: #adc2fa 2px solid;
-    border-radius: 2px;
-    width: 140px; height: 34px;
-    margin-bottom: 7px;
+    background-color:#fff4da;
+    border: 0;
+    border-radius: 20px;
+    width: 170px; height: 34px;
     margin-right: 10px;
 }
 .chartButton:hover {
-    background-color: #86a3f1;
+    background-color: #ffebbf;
 }
 .chartButton:active {
-    background-color: #527cf0;
+    background-color: #fff4da;
 }
 .changeColor {
-    background-color: #7495f0;
+    background-color: #fff4da;
 }
 .bar {
     width: 90%; height: 2px;
@@ -64,4 +67,5 @@
     display: flex;
     justify-content: space-between;
     margin-left: 60px;
+    margin-top: 20px;
 }
