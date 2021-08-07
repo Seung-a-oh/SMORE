@@ -454,7 +454,6 @@ def product_chart(request):
     "decimals": "1",
     "useDataPlotColorForLabels": "1",
     "theme": "fusion",
-    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
   },
 "data": [{
     "label": "여자",
@@ -473,7 +472,6 @@ def product_chart(request):
     "decimals": "1",
     "useDataPlotColorForLabels": "1",
     "theme": "fusion",
-    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
   },
 "data": [{
     "label": "여자",
@@ -487,7 +485,6 @@ def product_chart(request):
   "chart": {
     "caption": "구매자 연령대",
     "plottooltext": "$label, <b>$percentValue</b> ",
-    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
     "numberPrefix": "",
     "showPercentInTooltip": "0",
     "decimals": "1",
@@ -515,7 +512,6 @@ def product_chart(request):
   "chart": {
     "caption": "구매자 연령대",
     "plottooltext": "$label, <b>$percentValue</b> ",
-    "paletteColors": "#e68dcf,#6d9bdf,#ff4868,#B0D67A,#894523",
     "numberPrefix": "",
     "showPercentInTooltip": "0",
     "decimals": "1",
