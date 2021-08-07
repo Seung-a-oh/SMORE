@@ -59,7 +59,8 @@ body{
     margin-bottom: 40px;
 }
 .others {
-    width: 60%;
+    width: 90%;
+    padding-left:10%;
     height: 200px;
     overflow:scroll;
     overflow-x: hidden;
