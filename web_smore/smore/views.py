@@ -115,9 +115,6 @@ def exper_delete(request, id):
     delete_exper.delete()
     return redirect('experience')
 
-def dashboard(request):
-    return render(request, 'dashboard.html')
-
 def com_chart(request):
     dataSource = OrderedDict()
     dataSource2 = OrderedDict()
