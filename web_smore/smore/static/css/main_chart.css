@@ -37,20 +37,20 @@
     margin-top: 44px;
 }
 .chartButton {
-    background-color: #d2dcf8;
-    border: #adc2fa 2px solid;
-    border-radius: 2px;
+    background-color:#fff4da;
+    border: 0;
+    border-radius: 20px;
     width: 170px; height: 34px;
     margin-right: 10px;
 }
 .chartButton:hover {
-    background-color: #86a3f1;
+    background-color: #ffebbf;
 }
 .chartButton:active {
-    background-color: #527cf0;
+    background-color: #fff4da;
 }
 .changeColor {
-    background-color: #7495f0;
+    background-color: #fff4da;
 }
 .bar {
     width: 90%; height: 2px;

@@ -231,7 +231,10 @@
 }
 .home-section{
   position: relative;
-  background:  #ecf1fc;
+  /* background:  #ecf1fc; */
+  /* background-color: #f8f8f8; */
+
+  background-color: rgb(245, 245, 245);
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
