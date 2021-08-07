@@ -1,5 +1,19 @@
 /* Google Fonts Import Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -11,6 +25,7 @@
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-family: 'GmarketSansMedium';
 }
 .sidebar{
   position: fixed;
@@ -216,7 +231,7 @@
 }
 .home-section{
   position: relative;
-  background: #E4E9F7;
+  background:  #e5ebfa;
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
