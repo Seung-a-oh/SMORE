@@ -4,7 +4,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins','GmarketSansMedium', sans-serif;
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 .sidebar{
   position: fixed;
@@ -210,7 +216,7 @@
 }
 .home-section{
   position: relative;
-  background:  white;
+  background: #E4E9F7;
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);

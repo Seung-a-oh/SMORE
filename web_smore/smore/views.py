@@ -194,10 +194,10 @@ def com_chart(request):
 
     # Create an object for the column 2D chart using the FusionCharts class constructor
     # The chart data is passed to the `dataSource` parameter.
-    column2D = FusionCharts("column2d", "ex1" , "650", "350", "chart-1", "json", dataSource)
-    column2D2 = FusionCharts("column2d", "ex2" , "650", "350", "chart-3", "json", dataSource2)
+    column2D = FusionCharts("column2d", "ex1"  , "650", "340", "chart-1", "json", dataSource)
+    column2D2 = FusionCharts("column2d", "ex2"  , "650", "340", "chart-3", "json", dataSource2)
 
-    chartObj = FusionCharts( 'bar2d', 'ex3', '700', '350', 'chart-4', 'json', """{
+    chartObj = FusionCharts( 'bar2d', 'ex3', '650', '340', 'chart-4', 'json', """{
   "chart": {
     "caption": "상품 판매 순위",
     "yaxisname": "판매 개수",
@@ -320,7 +320,7 @@ def com_chart(request):
     }
   ]
 }""")
-    chartObj4 = FusionCharts( 'line', 'ex7', '700', '350', 'chart-7', 'json', """{
+    chartObj4 = FusionCharts( 'line', 'ex7', '650', '350', 'chart-7', 'json', """{
   "chart": {
     "caption": "구독자 수",
     "yaxisname": "명",
@@ -399,7 +399,7 @@ def product_chart(request):
    # Create an object for the column 2D chart using the FusionCharts class constructor
    # The chart data is passed to the `dataSource` parameter.
 
-   column2D = FusionCharts("column2d", "ex1" , "610", "340", "chart-1", "json", dataSource) 
+   column2D = FusionCharts("column2d", "ex1"  , "610", "340", "chart-1", "json", dataSource) 
    return  render(request, 'product_chart.html', {'output' : column2D.render(), 'chartTitle': ''}) 
    
 def main_chart(request):
@@ -434,8 +434,8 @@ def main_chart(request):
       data["label"] = key
       data["value"] = value
       dataSource["data"].append(data)
-  column2D = FusionCharts("column2d", "ex1" , "600", "400", "chart-1", "json", dataSource)
-  chartObj = FusionCharts( 'line', 'ex2', '600', '400', 'chart-2', 'json', """{
+  column2D = FusionCharts("column2d", "ex1" , "650", "340", "chart-1", "json", dataSource)
+  chartObj = FusionCharts( 'line', 'ex2', '650', '340', 'chart-2', 'json', """{
   "chart": {
     "caption": "최근 10일간 매출 추이",
     "yaxisname": "만원",
@@ -529,7 +529,7 @@ def main_chart(request):
     ]
   }""")
   
-  chartObj3 = FusionCharts( 'msline', 'ex4', '600', '400', 'chart-4', 'json', """{
+  chartObj3 = FusionCharts( 'msline', 'ex4', '650', '340', 'chart-4', 'json', """{
   "chart": {
     "caption": "구독자 증가 수 및 방문자 수",
     "yaxisname": "명",
@@ -616,7 +616,7 @@ def main_chart(request):
   return render(request, 'main_chart.html', {'output' : column2D.render(), 'output2': chartObj.render(), 'output3': chartObj2.render(),'output4': chartObj3.render()})
 
 def research_chart(request):
-    chartObj = FusionCharts( 'bar2d', 'ex1', '700', '350', 'chart-1', 'json', """{
+    chartObj = FusionCharts( 'bar2d', 'ex1','610', '340', 'chart-1', 'json', """{
     "chart": {
       "caption": "우리 기업을 구독한 이유",
       "yaxisname": "응답 비율",
@@ -647,7 +647,7 @@ def research_chart(request):
       }
     ]
   }""")
-    chartObj2 = FusionCharts( 'bar2d', 'ex2', '700', '350', 'chart-2', 'json', """{
+    chartObj2 = FusionCharts( 'bar2d', 'ex2', '610', '340', 'chart-2', 'json', """{
     "chart": {
       "caption": "우리 기업의 강점",
       "yaxisname": "응답 비율",
@@ -678,7 +678,7 @@ def research_chart(request):
       }
     ]
   }""")
-    chartObj3 = FusionCharts( 'bar2d', 'ex3', '700', '350', 'chart-3', 'json', """{
+    chartObj3 = FusionCharts( 'bar2d', 'ex3',  '610', '340', 'chart-3', 'json', """{
     "chart": {
       "caption": "우리 기업의 보완점",
       "yaxisname": "응답 비율",
